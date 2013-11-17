@@ -1,0 +1,25 @@
+<koken:include file="_includes/header.html" />
+<div class="row">
+	<div class="boxed col-xs-12">
+   	<h1 class="inverse">Fehler/Error: {{ routed_variables.code }}</h1>
+    	<koken:if data="routed_variables.code" equals="404">
+    		<div class="bs-callout bs-callout-warning"><p>Die gewünschte Seite wurde nicht gefunden. Wenn Sie von einer externen Webseite hierhin gekommen sind, enthält diese einen veralteten Link.
+    			Falls möglich korrigieren Sie den fehlerhafte Link oder informieren den Betreiber der Webseite über das Problem.</p>
+    			<p>Falls Sie auf der Suche nach Informationen über Joomla!, WordPress o.ä hierher gelangt sind, finden Sie die gewünschten Informationen evtl.
+    			auf meiner zweiten Website <a href="http://www.brisoft.de" title="BRIsoft.de">BRIsoft.de</a>.</p>
+    		</div> 
+    		<hr />
+    		<div class="bs-callout bs-callout-warning"><p>The page you were searching for does not exist. If you followed a link from another website, then this link was outdated. If possible please
+    			correct this link or inform the website's owner about the problem.</p>
+    			<p>If you are searching for information about Joomla!, WordPress etc., you may find the required information on my other website
+    			<a href="http://www.brisoft.de" title="BRIsoft.de">BRIsoft.de</a>.</p>
+    		</div> 
+  		<koken:else>
+  			<div class="bs-callout bs-callout-danger">Ein unbekannter Fehler ist aufgetreten.</div>
+  			<hr />
+  			<div class="bs-callout bs-callout-danger">An unknown problem happened</div>
+		</koken:if>
+  		<div>&nbsp;</div>
+  	</div>
+</div>
+<koken:include file="_includes/footer.html" />

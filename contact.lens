@@ -1,0 +1,47 @@
+<koken:include file="_includes/header.html" />
+<koken:asset file="contact/js/contact_form.js" />
+<article id="page">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<header><h1 class="inverse">Kontaktformular</h1></header>
+			<div class="fullbox text ">
+				<div class="row panel-body">
+					<form id="ajax-contact-form" action="javascript:alert('success!');" role="form" class="form-horizontal">
+						<fieldset>
+							<div id="fields">
+								<div class="form-group">
+									<label for="name" class="col-md-2 control-label">Name:</label>
+									<div class="col-md-8">
+										<input class="textbox form-control" id="name" type="text" name="name" required value="" placeholder="Name" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="email" class="col-md-2 control-label">Email-Adresse:</label>
+									<div class="col-md-8">
+										<input class="textbox form-control" id="email" type="email" name="email" required value="" placeholder="adresse@email.com" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="betreff" class="col-md-2 control-label">Betreff:</label>
+									<div class="col-md-8">
+										<input class="textbox form-control" id="betreff" type="text" name="betreff" required value="" placeholder="Text" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="message" class="col-md-2 control-label">Ihre Nachricht:</label>
+									<div class="col-md-8">
+										<textarea class="textbox2 form-control" id="message" name="message" required rows="10" cols="30" placeholder="Nachrichtentext" ></textarea>
+									</div>
+								</div>
+								<input class="button btn btn-primary" type="submit"
+									value="Abschicken" />
+							</div>
+							<div id="note"></div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>
+<koken:include file="_includes/footer.html" />

@@ -1,0 +1,12 @@
+<koken:include file="_includes/header.html" />
+<koken:load>
+	<article id="page">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<header><h1 class="inverse">{{ page.title }}</h1></header>
+				<div class="fullbox text">{{ page.content }}</div>
+			</div>
+		</div>
+	</article>
+</koken:load>
+<koken:include file="_includes/footer.html" />

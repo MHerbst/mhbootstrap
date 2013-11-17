@@ -1,0 +1,7 @@
+<koken:include file="_includes/header.html" />
+<koken:load order_by="created_by" order_direction="desc" limit="6">
+	<div id="albumlist">
+		<koken:include file="_includes/albumlist.lens" />
+	</div>	
+</koken:load>
+<koken:include file="_includes/footer.html" />

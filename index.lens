@@ -1,0 +1,70 @@
+<koken:include file="_includes/header.html" />
+<koken:head>
+  	<meta name="description" content="{{ site.description }}" />
+  	<meta name="keywords" content="{{ site.keywords }}" />
+</koken:head>
+<section id="imgshowcase">
+	<div class="row">
+   	<div class="col-xs-12 ">
+   	<div class="alert alert-warning"><strong>Hinweis:</strong> Diese Website ist gerade im Neuaufbau. Alle Inhalte sind derzeit noch unter der alten Adresse <a href="http://www.mherbst.de">www.mherbst.de</a> zu finden.</div>
+      	<koken:pulse source="featured_content" /> 
+   	</div> 
+  	</div> 
+</section>  
+<section id="latestalbums">
+	<div class="row">
+		<div class="col-xs-12">
+   		<h2 class="major inverse">Neue Photoalben</h2>
+		</div>
+	</div>
+	<div class="row">   
+	   <koken:load source="albums" limit="4" order_by="created_on" order_direction="desc">
+	      <koken:loop>
+	         <div class="col-md-6">
+		         <div class="boxed">
+		            <figure >
+		               <koken:link title="Album '{{ album.title }}' öffnen"><koken:img alt="{{ content.caption | content.title }}" fade="true" size="1.5:1" /></koken:link>
+		               <figcaption><koken:link title="Album '{{ album.title }}' öffnen">{{ album.title }}</koken:link></figcaption>
+		            </figure>
+		         </div>
+	         </div>
+	      </koken:loop>
+	   </koken:load>
+	</div>
+</section>
+<section id="latestessays">
+	<div class="row">
+		<div class="col-xs-12">
+	   	<h2 class="major inverse">Neue Artikel</h2>
+	   </div>
+	</div>
+	<div class="row">   
+	   <koken:load source="essays" limit="4" order_by="created_on" order_direction="desc">
+	      <koken:loop>
+	         <article class="col-xs-12 col-sm-12 col-md-6">
+		         <div class="essay_preview boxed">
+		            <header>
+		            	<h3 class="inverse"><koken:link title="Artikel '{{essay.title }}' lesen">{{ essay.title }}</koken:link></h3>
+		            </header>
+		            <div class="excerpt" style="position:relative">
+		            	<div class="pull-left" >
+	         				<koken:featured_image>
+          						<koken:img alt="{{ content.caption | content.title }}" height="140" size="16:9" lazy="true" />
+        						</koken:featured_image>
+        					</div>
+		            	<div style="overflow: hidden">
+		            		{{ essay.content truncate="300" paragraphs="true" }} 
+			            	<div style="position:absolute;bottom:5px;right:10px">
+			            		<div class="btn btn-default btn-xs">
+				            		<koken:link title="{{ essay.title }} weiterlesen"><em>Weiterlesen ...</em></koken:link>
+				            	</div>
+			            	</div>
+		            	</div>
+		            </div>
+		          </div>
+	         </article>
+	      </koken:loop>
+	   </koken:load>
+	</div>
+</section>
+<koken:include file="_includes/footer.html" />

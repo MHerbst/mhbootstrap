@@ -1,0 +1,72 @@
+<div class="row">
+	<div class="col-sm-8 col-md-9">
+      <koken:loop>
+         <article class="essay_preview boxed" style="padding-left: 5px">
+            <header>
+               <h2 class="inverse"><koken:link title="Artikel '{{ essay.title }}' lesen">{{ essay.title }}</koken:link></h2>
+            </header>
+            <div class="excerpt" style="position:relative">
+               <koken:featured_image>
+                  <div class="pull-left" >
+                     <koken:img alt="{{ content.title | content.caption}}" height="140" size="3:2" lazy="true" />
+                  </div>
+               </koken:featured_image>
+               <div>
+                  {{ essay.content truncate="450" paragraphs="true"}}
+                  <div style="position:absolute;bottom:5px;right:10px">
+                     <button type="button" class="btn btn-default btn-xs">
+                        <koken:link title="{{ essay.title }} weiterlesen"><em>Weiterlesen ...</em></koken:link>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </article>
+      </koken:loop>
+      <koken:include file="_includes/pagination.html" />
+	</div> 
+  	<div class="col-sm-4 col-md-3">
+  		<aside class="sidebar panel panel-dark">
+    		<koken:dates limit_to="essays">
+       		<h2 class="panel-heading"><i class="icon-calendar"></i> Archiv</h2>
+       		<ul class="inner">
+         		<koken:loop>
+           		<li>
+             		<koken:link>
+               		<i class="icon-caret-right"></i>&nbsp;{{ title }}&nbsp;<span class="badge">{{ counts.essays }}</span>
+             		</koken:link>
+           		</li>
+         		</koken:loop>
+       		</ul>
+    		</koken:dates>
+		</aside>
+		<aside class="sidebar panel panel-dark">    
+      	<koken:load source="categories" summary="true" limit_to="essays" order_by="essay_count">
+    			<h2 class="panel-heading"><i class="icon-folder-open"></i> Kategorien</h2>
+      		<ul class="inner">
+        			<koken:loop>
+           			<li>
+             			<koken:link to="archive_essays">
+               			<i class="icon-caret-right"></i>&nbsp;{{ title }}&nbsp;<span class="badge">{{ counts.essays }}</span>
+             			</koken:link>
+           			</li>
+        			</koken:loop>
+      		</ul>
+    		</koken:load>
+    	</aside>
+    	<aside class="sidebar panel panel-dark">
+    		<koken:load source="tags" summary="true" limit_to="essays" order_by="essay_count">
+      		<h2 class="panel-heading"><i class="icon-tags"></i> Tags</h2>
+      		<div class="taglist inner">
+        			<koken:loop>
+    						<koken:link to="archive_essays">
+              			<span class="label tag">{{ title }}</span> 
+            			</koken:link>
+          		</koken:loop>
+				</div>
+			</koken:load>
+  		</aside>
+  		<aside class="sidebar panel panel-dark">
+			<koken:include file="_includes/adsense.html" />
+		</aside>
+  	</div>
+</div> 

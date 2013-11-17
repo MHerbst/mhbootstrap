@@ -1,0 +1,138 @@
+<koken:include file="_includes/header.html" />
+<koken:load>
+	<koken:head>
+	  	<meta name="description" content="{{ content.caption | content.title strip_html="true" truncate="160" }}" />
+  		<meta name="keywords" content="{{ content.tags }}" />
+   	<meta property="og:site_name" content="{{ site.title }}" />
+   	<meta property="og:title" content="{{ content.title|content.caption strip_html="true" }}" />
+   	<meta property="og:description" content="{{ content.caption|content.title strip_html="true" }}" />
+  		<meta property="og:type" content="website" />
+   	<meta property="og:image" content="{{ content.presets.medium_large.url }}" />
+   	<meta property="og:image:width" content="{{ content.presets.medium_large.width }}" />
+   	<meta property="og:image:height" content="{{ content.presets.medium_large.height }}" />
+   	<meta property="og:url" content="{{ content.url }}" />
+    	<koken:content_image>
+      	<koken:not empty="profile.twitter">
+        		<meta name="twitter:card" content="photo" />
+        		<meta name="twitter:site" content="@{{ profile.twitter }}" />
+        		<meta name="twitter:creator" content="@{{ profile.twitter }}" />
+      	</koken:not>
+  		</koken:content_image>
+  		<koken:asset file="css/leaflet.css" />
+  	</koken:head>
+	<article id="content">
+		<div class="col-sm-12">
+			<header>
+				<h1 class="inverse">
+					<span>{{ content.caption | content.title }}</span>
+	        		<span style="float: right; ">
+						<koken:link title="Diashow" lightbox="true" bind_to_key="l"><i class="icon-resize-full"></i></koken:link>
+					</span>
+				</h1>
+			</header>  
+			<div class="fullbox">
+	     		<koken:content_image>
+	      			<koken:link lightbox="true" bind_to_key="l"><koken:img lazy="true" /></koken:link>
+	     		</koken:content_image>
+     			<ul class="pager">
+      			<koken:previous>
+         			<li class="previous" ><koken:link title="Vorheriges Bild" bind_to_key="left"><i class="icon-arrow-left"></i> zurück</koken:link></li>
+        			</koken:previous>
+					<li class="disabled middle" ><a href="#">{{ content.context.position }} von {{ content.context.total }} aus Album </a></li>
+					<li class="middle"><koken:parent><koken:link title="{{ album.title }} ansehen">{{ album.title }}</koken:link></koken:parent></li>
+					<koken:next>
+         			<li class="next" ><koken:link title="Nächstes Bild" bind_to_key="right">vor <i class="icon-arrow-right"></i></koken:link></li>
+        			</koken:next>
+      		</ul>  	
+				<aside>
+	      		<div class="row" style="padding: 10px 10px 0 10px;margin-bottom: 10px">
+	      			<div class="col-sm-6">
+           				{{ content.caption paragraphs="true" }}
+           				<ul style="padding-left: 0;margin-top: 40px">
+            				<koken:categories>
+            					<li style="margin-bottom: 10px"><i class="icon-folder-open"></i>&nbsp;
+	            					<koken:loop separator=", "><koken:link>{{ category.title }}</koken:link></koken:loop>
+	            				</li>
+           					</koken:categories>
+	         				<koken:tags>
+	         					<li><i class="icon-tags"></i>&nbsp;
+		         					<koken:loop>
+		         						<koken:link><span class="label tag">{{ tag.title }}</span></koken:link>
+			             			</koken:loop>
+						         </li>
+					         </koken:tags>
+							</ul>            		
+	      			
+		      			<div class="panel panel-default" style="margin-top: 20px">
+	  							<div class="panel-body" style="padding: 0px 10px 5px 10px">
+		    						<h5><i class="icon-share-alt"></i>&nbsp;Teilen</h5>
+		    						<koken:include file="_includes/share-content.html" />
+	  							</div>
+							</div>
+	      			</div>
+	      			<div class="col-sm-6">
+	      				<ul class="nav nav-tabs" id="myTab">
+								<li class="active"><a href="#home" data-toggle="tab"><i class="icon-info"></i>&nbsp;Details</a></li>
+  								<li><a href="#location" data-toggle="tab"><i class="icon-globe"></i> Aufnahmeort</a></li>
+							</ul>
+							<div class="tab-content">
+  								<div class="tab-pane active" id="home" style="min-height:200px">
+	            				<div class="col-xs-6">
+		            				<table class="table table-condensed">
+								         <koken:exif>
+		          							<koken:not empty="exif.model"><tr><td class="detfirstcol">Kamera:</td><td>{{ exif.model }}</td></tr></koken:not>
+			            					<koken:not empty="exif.exposure"><tr><td class="detfirstcol">Belichtung:</td><td>{{ exif.exposure }}</td></tr></koken:not>
+			            					<koken:not empty="exif.aperture"><tr><td class="detfirstcol">Blende:</td><td>{{ exif.aperture }}</td></tr></koken:not>
+			            					<koken:not empty="exif.focal_length"><tr><td class="detfirstcol">Brennweite:</td><td>{{ exif.focal_length }}</td></tr></koken:not>
+			            					<koken:not empty="exif.iso_speed_ratings"><tr><td class="detfirstcol">ISO:</td><td>{{ exif.iso_speed_ratings }}</td></tr></koken:not>
+								        	</koken:exif>
+		       						</table> 
+		       					</div>
+	            				<div class="col-xs-6">
+		            				<table class="table table-condensed">
+		            					<tr><td class="detfirstcol">Aufgenommen:</td><td><koken:time data="content.captured_on" show="date" /></td></tr>
+		            					<tr><td class="detfirstcol">Veröffentlicht:</td><td><koken:time data="content.modified_on" show="date" /></td></tr>
+		            				</table>
+	            				</div>
+	       					</div>
+  								<div class="tab-pane" id="location">
+									<div class="inner" id="map" style="height:200px"></div>
+								</div>
+							</div>
+				     		<koken:iptc>
+				     			<koken:variable name="land" value="{{ iptc.country }}" />
+				     			<koken:variable name="stadt" value="{{ iptc.city }}" />
+				     		</koken:iptc>
+							<koken:geolocation>
+								<script>
+									$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+										  //alert(e.target);
+											var map = L.map('map').setView([{{ geolocation.latitude }}, {{ geolocation.longitude }}], 13);
+											L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+											    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+											}).addTo(map);
+											// add a marker in the given location, attach some popup content to it and open the popup
+											L.marker([{{ geolocation.latitude }}, {{ geolocation.longitude }}]).addTo(map)
+											<koken:not empty="land">
+											    .bindPopup('{{ stadt }} - {{ land }}')
+											    .openPopup();
+											</koken:not>
+										})
+								</script>
+							</koken:geolocation>				        	
+	      			</div>
+	      		</div>
+	      		<div class="row" >
+	      			<div class="col-xs-12">
+	      				<koken:discussion>
+	      					{{ discussion }}
+	   					</koken:discussion>
+	   					</div>
+	      		</div>
+	      	</aside>		      		
+			</div>
+		</div>			
+   </article>     
+</koken:load>
+<koken:asset file="js/leaflet.js" />
+<koken:include file="_includes/footer.html" />

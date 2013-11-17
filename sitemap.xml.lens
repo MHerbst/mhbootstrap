@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<koken:load source="essays">
+   <koken:loop>
+   <url>
+      <loc>{{ essay.url }}</loc>
+      <lastmod>{{ essay.modified_on.timestamp date_format="Y-m-d"}}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+   </url>  
+	</koken:loop>
+</koken:load>
+<koken:load source="pages">
+	<koken:loop>
+   <url>
+      <loc>{{ page.url }}</loc>
+      <lastmod>{{ page.modified_on.timestamp date_format="Y-m-d"}}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>	
+	</koken:loop>
+</koken:load>
+<koken:load source="albums">
+	<koken:loop>
+   <url>
+      <loc>{{ album.url }}</loc>
+      <lastmod>{{ album.created_on.timestamp date_format="Y-m-d"}}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>	
+	</koken:loop>
+</koken:load>
+<koken:load source="contents">
+	<koken:loop>
+   <url>
+      <loc>{{ content.url }}</loc>
+      <lastmod>{{ content.captured_on date_format="Y-m-d"}}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>	
+	</koken:loop>
+</koken:load>
+</urlset>

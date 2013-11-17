@@ -1,0 +1,7 @@
+<koken:include file="_includes/header.html" />
+<koken:load order_by="created_on" order_direction="desc" limit="6">
+	<div id="essaylist">
+		<koken:include file="_includes/essaylist.lens" />
+	</div>	
+</koken:load>
+<koken:include file="_includes/footer.html" />

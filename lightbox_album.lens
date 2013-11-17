@@ -1,0 +1,13 @@
+<html>
+<head>
+<koken:title />
+<link rel="shortcut icon" type="image/ico" href="http://www.mherbst.de/favicon.ico">
+
+<koken:load>
+	<koken:shift>
+		<meta http-equiv="refresh" content="0;URL='<koken:link lightbox="true" echo="true" />'">
+	</koken:shift>
+</koken:load>
+</head>
+<body></body>
+</html>
