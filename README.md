@@ -1,4 +1,4 @@
 mhbootstrap
 ===========
 
-Koken Theme bassed on Bootstrap
+Koken Theme based on Bootstrap
