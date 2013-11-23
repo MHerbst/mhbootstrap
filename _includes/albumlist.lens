@@ -6,7 +6,7 @@
 	         	<div class="col-md-6">
 		         	<div class="boxed">
 		            	<figure >
-		               	<koken:link title="Album '{{ album.title }}' ansehen"><koken:img alt="{{ content.caption }}" fade="true" size="1.5:1" /></koken:link>
+		               	<koken:link title="Album '{{ album.title }}' ansehen"><koken:img alt="{{ content.caption }}" fade="true" lazy="true" size="1.5:1" /></koken:link>
 		               	<figcaption><koken:link title="Album '{{ album.title }}' ansehen">{{ album.title }}</koken:link></figcaption>
 		            	</figure>
 		         	</div>
