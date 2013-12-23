@@ -6,7 +6,7 @@
 <section id="imgshowcase">
 	<div class="row">
    	<div class="col-xs-12 ">
-   	<div class="alert alert-warning"><strong>Hinweis:</strong> Diese Website ist gerade im Neuaufbau. Alle Inhalte sind derzeit noch unter der alten Adresse <a href="http://www.mherbst.de">www.mherbst.de</a> zu finden.</div>
+   	<div class="alert alert-warning"><strong>Hinweis:</strong> Diese Website ist gerade im Neuaufbau. Alle Inhalte sind derzeit noch unter der alten Adresse <a href="http://wp.mherbst.de">wp.mherbst.de</a> zu finden.</div>
       	<koken:pulse source="featured_content" /> 
    	</div> 
   	</div> 
