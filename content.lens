@@ -24,7 +24,7 @@
 		<div class="col-sm-12">
 			<header>
 				<h1 class="inverse">
-					<span>{{ content.caption | content.title }}</span>
+					<span>{{ content.title | content.caption }}</span>
 	        		<span style="float: right; ">
 						<koken:link title="Diashow" lightbox="true" bind_to_key="l"><i class="icon-resize-full"></i></koken:link>
 					</span>

@@ -1,5 +1,5 @@
 <koken:include file="_includes/header.html" />
-<koken:load limit="6">
+<koken:load infinite="true" >
 	<div id="albumlist">
 		<koken:include file="_includes/albumlist.lens" />
 	</div>	
