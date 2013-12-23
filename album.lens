@@ -38,8 +38,8 @@
 	        					<div class="boxed image_thumb">
 	         					<figure class="overlay">
 		           					<koken:link>
-		           						<koken:img alt="{{ content.caption | content.title }}" crop="true" lazy="true"  />  <!-- size="3:2" var vorher -->
-		         						<figcaption>{{ content.caption | content.title }}</figcaption>
+		           						<koken:img alt="{{ content.title | content.caption }}" crop="true" lazy="true"  />  <!-- size="3:2" var vorher -->
+		         						<figcaption>{{ content.title | content.caption }}</figcaption>
 		         					</koken:link>
 	               			</figure>
 	            			</div>
