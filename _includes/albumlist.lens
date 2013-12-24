@@ -31,7 +31,7 @@
         		</ul>
         	</koken:dates>
       </aside>
-	   <koken:categories limit_to="albums" order_by="album_count">
+	   <koken:categories> <!-- limit_to="albums" order_by="album_count"> -->
 	    	<aside class="sidebar panel panel-dark">
      			<h2 class="panel-heading"><i class="icon-folder-open"></i> Kategorien</h2>
        		<ul class="inner">
