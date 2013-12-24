@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="col-md-9">
 				<header>
-					<h1 class="inverse">Photos {{ archive.type.singular }}: {{ archive.title }}</h1>
+					<h1 class="inverse">Fotos {{ archive.type.singular }}: {{ archive.title }}</h1>
 				</header>
 				<div class="fullbox">
 					<section class="row" style="margin-top: 15px">
