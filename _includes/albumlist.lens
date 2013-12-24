@@ -18,7 +18,7 @@
    </div> 
    <div class="col-sm-4 col-md-3">
    	<aside class="sidebar panel panel-dark">
-    		<koken:dates limit_to="albums">
+    		<koken:dates> <!--  limit_to="albums"> -->
         		<h2 class="panel-heading"><i class="icon-calendar"></i> Archiv</h2>
         		<ul class="inner">
            		<koken:loop>
