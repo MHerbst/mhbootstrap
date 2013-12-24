@@ -31,20 +31,20 @@
         		</ul>
         	</koken:dates>
       </aside>
-	   <koken:load source="categories" summary="true" limit_to="albums" order_by="album_count">
+	   <koken:categories limit_to="albums" order_by="album_count">
 	    	<aside class="sidebar panel panel-dark">
      			<h2 class="panel-heading"><i class="icon-folder-open"></i> Kategorien</h2>
        		<ul class="inner">
          		<koken:loop>
            			<li>
              			<koken:link to="archive_albums">
-               			<i class="icon-caret-right"></i>&nbsp;{{ title }}&nbsp;<span class="badge">{{ counts.albums }}</span>
+               			<i class="icon-caret-right"></i>&nbsp;{{ title }}&nbsp;<span class="badge">{{ category.counts.albums }}</span>
              			</koken:link>
            			</li>
          		</koken:loop>
        		</ul>
        	</aside>
-     	</koken:load>
+     	</koken:categories>
      	<koken:load source="tags" summary="true" limit_to="albums" order_by="album_count">
      	  	<aside class="sidebar panel panel-dark">
      			<h2 class="panel-heading"><i class="icon-tags"></i> Tags</h2>
