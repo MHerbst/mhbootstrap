@@ -1,7 +1,7 @@
 <koken:include file="_includes/header.html" />
-<koken:load order_by="created_on" order_direction="desc" limit="6">
+<koken:load order_by="created_on" order_direction="desc" infinite="true">
 	<div id="albumlist">
-	   <h1 class="inverse">Photoalben {{ archive.type.singular case="title" }} {{ archive.title }}</h1>
+	   <h1 class="inverse">Fotoalben {{ archive.type.singular case="title" }} {{ archive.title }}</h1>
 	   <koken:include file="_includes/albumlist.lens" />
 	</div>
 </koken:load>
