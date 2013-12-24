@@ -18,7 +18,7 @@
    </div> 
    <div class="col-sm-4 col-md-3">
    	<aside class="sidebar panel panel-dark">
-    		<koken:dates> <!--  limit_to="albums"> -->
+    		<koken:dates limit_to="albums"> 
         		<h2 class="panel-heading"><i class="icon-calendar"></i> Archiv</h2>
         		<ul class="inner">
            		<koken:loop>
@@ -31,13 +31,13 @@
         		</ul>
         	</koken:dates>
       </aside>
-	   <koken:categories> <!-- limit_to="albums" order_by="album_count"> -->
+	   <koken:categories limit_to="albums" order_by="album_count">
 	    	<aside class="sidebar panel panel-dark">
      			<h2 class="panel-heading"><i class="icon-folder-open"></i> Kategorien</h2>
        		<ul class="inner">
          		<koken:loop>
            			<li>
-             			<koken:link to="archive_albums">
+             			<koken:link> <!--  to="archive_albums"> -->
                			<i class="icon-caret-right"></i>&nbsp;{{ title }}&nbsp;<span class="badge">{{ category.counts.albums }}</span>
              			</koken:link>
            			</li>
