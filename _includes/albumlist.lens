@@ -1,7 +1,7 @@
 <div class="row">
   	<div class="col-sm-8 col-md-9">
       <div class="row">   
-	   	<koken:load> <!--  source="albums"> -->
+	   	<koken:load> 
 	      	<koken:loop>
 	         	<div class="col-md-6">
 		         	<div class="boxed">
@@ -14,7 +14,7 @@
 	      	</koken:loop>
 	   	</koken:load>
 		</div>			
-		<koken:include file="_includes/pagination.html" />
+		<!--  koken:include file="_includes/pagination.html" / -->
    </div> 
    <div class="col-sm-4 col-md-3">
    	<aside class="sidebar panel panel-dark">
