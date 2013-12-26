@@ -6,7 +6,7 @@
 <section id="imgshowcase">
 	<div class="row">
    	<div class="col-xs-12 ">
-   	<div class="alert alert-warning"><strong>Hinweis:</strong> Diese Website ist gerade im Neuaufbau. Alle Inhalte sind derzeit noch unter der alten Adresse <a href="http://wp.mherbst.de">wp.mherbst.de</a> zu finden.
+   	<div class="alert alert-warning"><strong>Hinweis:</strong> Diese Website ist gerade im Neuaufbau. 
    	Wenn Sie den Internet Explorer 11 verwenden, kommt es derzeit bei einigen Bildern noch zu Darstellungsproblemen.</div>
       	<koken:pulse source="featured_content" /> 
    	</div> 
