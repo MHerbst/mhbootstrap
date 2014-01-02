@@ -53,14 +53,12 @@
           						<koken:img alt="{{ content.caption | content.title }}" height="140" size="16:9" lazy="true" />
         						</koken:featured_image>
         					</div>
-		            	<div style="overflow: hidden">
+		            	<div> <!--  style="overflow: hidden" -->
 		            		{{ essay.content truncate="300" paragraphs="true" }} 
-			            	<div style="position:absolute;bottom:5px;right:10px">
-			            		<div class="btn btn-default btn-xs">
-				            		<koken:link title="{{ essay.title }} weiterlesen"><em>Weiterlesen ...</em></koken:link>
-				            	</div>
-			            	</div>
 		            	</div>
+		            	<div style="position:absolute;bottom:5px;right:10px" class="btn btn-default btn-xs">
+		            		<koken:link title="{{ essay.title }} weiterlesen"><em>Weiterlesen ...</em></koken:link>
+		            	</div>		            
 		            </div>
 		          </div>
 	         </article>

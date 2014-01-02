@@ -13,11 +13,9 @@
                </koken:featured_image>
                <div>
                   {{ essay.content truncate="450" paragraphs="true"}}
-                  <div style="position:absolute;bottom:5px;right:10px">
-                     <button type="button" class="btn btn-default btn-xs">
-                        <koken:link title="{{ essay.title }} weiterlesen"><em>Weiterlesen ...</em></koken:link>
-                     </button>
-                  </div>
+               </div>
+               <div style="position:absolute;bottom:5px;right:10px" class="btn btn-default btn-xs">
+                   <koken:link title="{{ essay.title }} weiterlesen"><em>Weiterlesen ...</em></koken:link>
                </div>
             </div>
          </article>
