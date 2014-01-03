@@ -57,9 +57,7 @@
 				</div>
 			</aside>
 		</koken:load>
-   	<aside class="sidebar panel panel-dark">
-			<koken:include file="_includes/adsense.html" />
-		</aside>
+		<koken:include file="_includes/adsense.html" />
   	</div>
  </div>
 <koken:keyboard_scroll element="div.item" />

@@ -63,8 +63,6 @@
 				</div>
 			</koken:load>
   		</aside>
-  		<aside class="sidebar panel panel-dark">
-			<koken:include file="_includes/adsense.html" />
-		</aside>
+		<koken:include file="_includes/adsense.html" />
   	</div>
 </div> 
