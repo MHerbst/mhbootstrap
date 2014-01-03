@@ -60,7 +60,7 @@
 			</div>
 			<div class="col-sm-4 col-md-3">
 				<aside class="sidebar panel panel-dark">
-            	<h2 class="panel-heading"><i class="icon-info"></i> Details</h2>
+            	<h2><i class="icon-info"></i> Details</h2>
 					<div class="inner">
 						{{ album.description paragraphs="true" }}
 						<table class="table table-condensed">
@@ -71,14 +71,14 @@
          	   </div>
          	</aside>
            	<aside class="sidebar panel panel-dark">
-            	<h2 class="panel-heading"><i class="icon-share-alt"></i> Teilen</h2>
+            	<h2><i class="icon-share-alt"></i> Teilen</h2>
             	<ul class="inner">
             		<koken:include file="_includes/share-album-list.html" />
           		</ul>
           	</aside>
           	<koken:categories>
           	  	<aside class="sidebar panel panel-dark">
-	            	<h2 class="panel-heading"><i class="icon-folder-open"></i> Kategorien</h2>
+	            	<h2><i class="icon-folder-open"></i> Kategorien</h2>
 	           		<ul class="inner">
 	            		<koken:loop>
 	            			<li><koken:link><i class="icon-caret-right"></i>&nbsp;{{ category.title }}</koken:link></li>
@@ -88,7 +88,7 @@
         		</koken:categories>
 	         <koken:tags>
 	         	<aside class="sidebar panel panel-dark">
-            		<h2 class="panel-heading"><i class="icon-tags"></i> Tags</h2>
+            		<h2><i class="icon-tags"></i> Tags</h2>
               		<div class="taglist inner">
 		              	<koken:loop>
 		               	<koken:link class="label tag">{{ tag.title }}</koken:link>
@@ -98,7 +98,7 @@
 	         </koken:tags>
 	         <koken:topics>
 	           	<aside class="sidebar panel panel-dark">
-            		<h2 class="panel-heading"><i class="icon-external-link"></i> Referenzen</h2>
+            		<h2><i class="icon-external-link"></i> Referenzen</h2>
            			<ul class="inner">
          				<koken:loop>
            					<li><koken:link><i class="icon-caret-right"></i>&nbsp;{{ essay.title }}</koken:link></li>
@@ -106,9 +106,7 @@
        				</ul>
        			</aside>
         		</koken:topics>
-				<aside class="sidebar panel panel-dark">
-					<koken:include file="_includes/adsense.html" />
-				</aside>
+				<koken:include file="_includes/adsense.html" />
 			</div>
 		</div>
 	</article>
