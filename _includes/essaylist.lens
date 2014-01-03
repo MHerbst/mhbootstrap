@@ -25,7 +25,7 @@
   	<div class="col-sm-4 col-md-3">
   		<aside class="sidebar panel panel-dark">
     		<koken:dates limit_to="essays">
-       		<h2 class="panel-heading"><i class="icon-calendar"></i> Archiv</h2>
+       		<h2><i class="icon-calendar"></i> Archiv</h2>
        		<ul class="inner">
          		<koken:loop>
            		<li>
@@ -39,7 +39,7 @@
 		</aside>
 		<aside class="sidebar panel panel-dark">    
       	<koken:load source="categories" summary="true" limit_to="essays" order_by="essay_count">
-    			<h2 class="panel-heading"><i class="icon-folder-open"></i> Kategorien</h2>
+    			<h2><i class="icon-folder-open"></i> Kategorien</h2>
       		<ul class="inner">
         			<koken:loop>
            			<li>
@@ -53,7 +53,7 @@
     	</aside>
     	<aside class="sidebar panel panel-dark">
     		<koken:load source="tags" summary="true" limit_to="essays" order_by="essay_count">
-      		<h2 class="panel-heading"><i class="icon-tags"></i> Tags</h2>
+      		<h2><i class="icon-tags"></i> Tags</h2>
       		<div class="taglist inner">
         			<koken:loop>
     						<koken:link to="archive_essays">

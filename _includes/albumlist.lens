@@ -19,7 +19,7 @@
    <div class="col-sm-4 col-md-3">
    	<aside class="sidebar panel panel-dark">
     		<koken:dates limit_to="albums"> 
-        		<h2 class="panel-heading"><i class="icon-calendar"></i> Archiv</h2>
+        		<h2><i class="icon-calendar"></i> Archiv</h2>
         		<ul class="inner">
            		<koken:loop>
             		<li>
@@ -33,7 +33,7 @@
       </aside>
 	   <koken:categories limit_to="albums" order_by="album_count">
 	    	<aside class="sidebar panel panel-dark">
-     			<h2 class="panel-heading"><i class="icon-folder-open"></i> Kategorien</h2>
+     			<h2><i class="icon-folder-open"></i> Kategorien</h2>
        		<ul class="inner">
          		<koken:loop>
            			<li>
@@ -47,7 +47,7 @@
      	</koken:categories>
      	<koken:load source="tags" summary="true" limit_to="albums" order_by="album_count">
      	  	<aside class="sidebar panel panel-dark">
-     			<h2 class="panel-heading"><i class="icon-tags"></i> Tags</h2>
+     			<h2><i class="icon-tags"></i> Tags</h2>
      			<div class="taglist inner">
         			<koken:loop>
      					<koken:link to="archive_albums">
