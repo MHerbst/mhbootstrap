@@ -1,5 +1,5 @@
 <koken:include file="_includes/header.html" />
-<koken:asset file="contact/js/contact_form.js" />
+<koken:asset file="js/contact_form.js" />
 <article id="page">
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1">

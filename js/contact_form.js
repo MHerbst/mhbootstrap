@@ -5,7 +5,7 @@ var str = $(this).serialize();
 
 $.ajax({
    type: "POST",
-   url: "/koken/contactform/contact.php",
+   url: "/contactform/contact.php",
    data: str,
    success: function(msg){
 	$("#note").ajaxComplete(function(event, request, settings){
