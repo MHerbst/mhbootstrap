@@ -31,9 +31,7 @@
 				</h1>
 			</header>  
 			<div class="fullbox">
-	     		<koken:content_image>
-	      			<koken:link lightbox="true" bind_to_key="l"><koken:img lazy="true" /></koken:link>
-	     		</koken:content_image>
+	     		<koken:content_image><koken:link lightbox="true" bind_to_key="l"><koken:img lazy="true" /></koken:link></koken:content_image>
      			<ul class="pager">
       			<koken:previous>
          			<li class="previous" ><koken:link title="Vorheriges Bild" bind_to_key="left"><i class="icon-arrow-left"></i> zurück</koken:link></li>
@@ -90,6 +88,7 @@
 		       					</div>
 	            				<div class="col-xs-6">
 		            				<table class="table table-condensed">
+		            					<tr><td class="detfirstcol">Fotograf:</td><td>Martin Herbst</td></tr>
 		            					<tr><td class="detfirstcol">Aufgenommen:</td><td><koken:time data="content.captured_on" show="date" /></td></tr>
 		            					<tr><td class="detfirstcol">Veröffentlicht:</td><td><koken:time data="content.modified_on" show="date" /></td></tr>
 		            				</table>

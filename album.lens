@@ -64,6 +64,7 @@
 					<div class="inner">
 						{{ album.description paragraphs="true" }}
 						<table class="table table-condensed">
+						   <tr><td class="firstcol"><i class="icon-user"></i> Erstellt von:</td><td>Martin Herbst</td></tr>
 							<tr><td class="firstcol"><i class="icon-picture"></i> # Bilder:</td><td>{{ album.counts.images }}</td></tr>
    	         		<tr><td class="firstcol"><i class="icon-calendar"></i> Veröffentlicht:</td><td><koken:time data="album.created_on" show="date" /></td></tr>
       	      		<tr><td class="firstcol"><i class="icon-calendar"></i> Geändert:</td><td><koken:time data="album.modified_on" show="date" /></td></tr>

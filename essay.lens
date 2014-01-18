@@ -47,6 +47,7 @@
             	<h2><i class="icon-info"></i> Details</h2>
             	<div class="inner">
             		<table class="table table-condensed">
+            			<tr><td class="firstcol"><i class="icon-user"></i> Autor:</td><td>Martin Herbst</td></tr>
 		 					<tr><td class="firstcol"><i class="icon-calendar"></i> Veröffentlicht:</td><td><koken:time data="essay.published_on" show="date" /></td></tr>
             			<tr><td class="firstcol"><i class="icon-calendar"></i> Geändert:</td><td><koken:time data="essay.modified_on" show="date" /></td></tr>
             		</table>
