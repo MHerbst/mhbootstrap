@@ -16,6 +16,9 @@
         		<meta name="twitter:card" content="photo" />
         		<meta name="twitter:site" content="@{{ profile.twitter }}" />
         		<meta name="twitter:creator" content="@{{ profile.twitter }}" />
+        		<meta name="twitter:img:src" content="{{ content.presets.medium.url }}" />
+        		<meta name="twitter:description" content="{{ content.caption|content.title strip_html="true" }}" />
+        		<meta name="twitter:title" content="{{ content.title|content.caption strip_html="true" }}" />
       	</koken:not>
   		</koken:content_image>
   		<koken:asset file="css/leaflet.css" />
