@@ -17,8 +17,8 @@
         		<meta name="twitter:site" content="@{{ profile.twitter }}" />
         		<meta name="twitter:creator" content="@{{ profile.twitter }}" />
         		<meta name="twitter:image:src" content="{{ content.presets.medium.url }}" />
-        		<meta name="twitter:image:width" content="{{ {{ content.presets.medium.width }} }}" />
-        		<meta name="twitter:image:height" content="{{ {{ content.presets.medium.width }} }}" />
+        		<meta name="twitter:image:width" content="{{ content.presets.medium.width }}" />
+        		<meta name="twitter:image:height" content="{{ content.presets.medium.width }}" />
         		<meta name="twitter:description" content="{{ content.caption|content.title strip_html="true" }}" />
         		<meta name="twitter:title" content="{{ content.title|content.caption strip_html="true" }}" />
       	</koken:not>
