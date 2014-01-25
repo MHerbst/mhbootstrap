@@ -26,7 +26,7 @@
   	</koken:head>
 	<article id="album">
 		<div class="row">
-			<div class="col-sm-8 col-md-9">
+			<div class="col-md-9">
 				<header>
 					<h1 class="inverse"><span>{{ album.title }}</span><span class="pull-right">
 					<koken:link lightbox="true" bind_to_key="l" title="Diashow"><i class="icon-resize-full"></i></koken:link></span></h1>
@@ -58,7 +58,7 @@
 	      		</koken:next>
 				</ul>
 			</div>
-			<div class="col-sm-4 col-md-3">
+			<div class="col-md-3">
 				<aside class="sidebar panel panel-dark">
             	<h2><i class="icon-info"></i> Details</h2>
 					<div class="inner">
