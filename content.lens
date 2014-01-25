@@ -37,12 +37,13 @@
 			</header>  
 			<div class="fullbox">
 	     		<koken:content_image><koken:link lightbox="true" bind_to_key="l"><koken:img lazy="true" /></koken:link></koken:content_image>
+	     		<koken:content_video><koken:video /></koken:content_video>
      			<ul class="pager">
       			<koken:previous>
          			<li class="previous" ><koken:link title="Vorheriges Bild" bind_to_key="left"><i class="icon-arrow-left"></i> zurück</koken:link></li>
         			</koken:previous>
-					<li class="disabled middle" ><a href="#">{{ content.context.position }} von {{ content.context.total }} aus Album </a></li>
-					<li class="middle"><koken:parent><koken:link title="{{ album.title }} ansehen">{{ album.title }}</koken:link></koken:parent></li>
+					<li class="middle">{{ content.context.position }} von {{ content.context.total }}<a href="#">&nbsp;</a></li>
+					<li class="middle"><koken:parent>aus&nbsp;Album&nbsp;<koken:link title="{{ album.title }} ansehen">{{ album.title }}</koken:link></koken:parent></li>
 					<koken:next>
          			<li class="next" ><koken:link title="Nächstes Bild" bind_to_key="right">vor <i class="icon-arrow-right"></i></koken:link></li>
         			</koken:next>
