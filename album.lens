@@ -34,7 +34,7 @@
 				<div class="fullbox">
    				<section class="row" style="margin-top: 15px">
 	   				<koken:loop>
-	      				<div class="col-xs-12 col-sm-12 col-md-6">
+	      				<div class="col-xs-12 col-sm-6 col-md-6">
 	        					<div class="boxed image_thumb">
 	         					<figure class="overlay">
 		           					<koken:link>
