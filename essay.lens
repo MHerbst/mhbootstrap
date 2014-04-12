@@ -41,6 +41,7 @@
 		        		</koken:next>
 		      	</ul> 
 				</div>
+				<koken:include file="_includes/discuss.lens" />
 			</div>
 			<div class="col-sm-4 col-md-3">
 				<aside class="sidebar panel panel-dark">
@@ -97,7 +98,7 @@
 				<koken:include file="_includes/adsense.html" />
 			</div>
 		</div>
-     	<koken:include file="_includes/discuss.lens" />
+     
 	</article>
 </koken:load>
 <koken:include file="_includes/footer.html" />
