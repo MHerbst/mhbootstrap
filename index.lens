@@ -2,6 +2,18 @@
 <koken:head>
   	<meta name="description" content="{{ site.description }}" />
   	<meta name="keywords" content="{{ site.keywords }}" />
+   <meta property="og:site_name" content="{{ site.title }}" />
+   <meta property="og:title" content="{{ site.title }}" />
+   <meta property="og:description" content="{{ site.description }}" />
+  	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://www.mherbst.de/storage/cache/images/000/163/Brilon-7,medium_large.JPG?1377440092">
+   <meta property="og:url" content="https://www.mherbst.de" />
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:site" content="@martinBrilon" />
+   <meta name="twitter:creator" content="@martinBrilon" />
+  	<meta name="twitter:image:src" content="https://www.mherbst.de/storage/cache/images/000/163/Brilon-7,medium_large.JPG?1377440092" />
+  	<meta name="twitter:description" content="{{ site.description }}" />
+   <meta name="twitter:title" content="{{ site.title }}" />  	
 </koken:head>
 <section id="imgshowcase">
 	<div class="row">
