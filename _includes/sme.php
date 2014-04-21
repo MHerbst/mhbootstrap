@@ -171,7 +171,18 @@ if ($templ === "essay")
 {
 	$doit['pi'] = false; $doit['ki'] = true;
 }
-$url = Koken::$location['site_url'].Koken::$location['here'];
+if ($templ === "content")
+{
+	$url = str_replace(":slug",Koken::$routed_variables['slug'], Koken::$location['site_url'].Koken::$location['urls']['content']);
+}
+else if ($templ == "album")
+{
+	$url = str_replace(":slug",Koken::$routed_variables['slug'], Koken::$location['site_url'].Koken::$location['urls']['album']);
+}
+else
+{
+	$url = Koken::$location['site_url'].Koken::$location['here'];
+}
 $url_enc = urlencode($url);
 $ctr = getSocialData($url, $doit, true);
 ?>
