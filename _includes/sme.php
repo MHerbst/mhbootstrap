@@ -71,7 +71,6 @@ function getSocialData($url, $doit, $debug = false)
 		$rawData = curl_exec($ch);
 		if ($debug) smeDebug("Twitter", $ch, $rawData);
 		curl_close($ch);
-		
 		if($twitterData = json_decode($rawData)) {
 			$counter['tw'] = intval($twitterData->count);
 		} else {
@@ -132,12 +131,14 @@ function getSocialData($url, $doit, $debug = false)
 		$rawData = curl_exec($ch);
 		if ($debug) smeDebug("Pinterest", $ch, $rawData);
 		curl_close($ch);
-		
-		if($pinterestData = json_decode($rawData, true)) {
-			$counter['pi'] = intval($pinterestData['count']);
-		} else {
-			$counter['pi'] = intval(0);
-		}
+		$counter['pi'] = intval(0);
+		if (preg_match("/^.*\((.*)\)/", $rawData, $matches) === 1) // bereinigen
+		{
+			if($pinterestData = json_decode($matches[1], true)) 
+			{
+				$counter['pi'] = intval($pinterestData['count']);
+			}
+		} 
 	}
 	
 	if ($doit['xi'])
@@ -149,11 +150,11 @@ function getSocialData($url, $doit, $debug = false)
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_SSL_VERIFYPEER => false,
 		));
-		$res = curl_exec($ch);
+		$rawData = curl_exec($ch);
 		if ($debug) smeDebug("Xing", $ch, $rawData);
 		curl_close($ch);
 		//Find the interesting part to strip
-		preg_match("'<span class=\"xing-count right\">(.*?)</span>'si", $res, $matches);
+		preg_match("'<span class=\"xing-count right\">(.*?)</span>'si", $rawData, $matches);
 		
 		//To make sure there is a count for that site
 		if( isset( $matches ) ) {
