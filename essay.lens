@@ -57,7 +57,7 @@
             <aside class="sidebar panel panel-dark">
             	<h2><i class="icon-share-alt"></i> Teilen </h2>
             	<ul class="inner">
-            		<koken:include file="_includes/share-essay-list.html" />
+            		<koken:include file="_includes/sme.php" />
           		</ul>
           	</aside>
         		<koken:categories>

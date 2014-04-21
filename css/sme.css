@@ -1,0 +1,59 @@
+/** Base Colors */
+/** Social Media Platform Colors */
+/* sme share box
+************************************************/
+.smeShare { margin: 0 0 10px 0; font-size: 12px; line-height: 20px; vertical-align: top; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; overflow: hidden; *zoom: 1; }
+
+
+/* sme button
+************************************************/
+[class^="smeFlat"], [class*="smeFlat"] { display: -moz-inline-stack; display: inline-block; zoom: 1; *display: inline; font-family: Arial,Helvetica,sans-serif; font-size: 12px; font-weight: 300; cursor: pointer; vertical-align: baseline; margin: 0 5px 5px 0; -webkit-font-smoothing: antialiased; }
+
+a[class^="smeFlat"], a[class*="smeFlat"], a[class^="smeFlat"]:visited, a[class*="smeFlat"]:visited { color: #222; text-decoration: none; }
+
+/* sme count
+************************************************/
+
+[class^="smeFlat"] > span, [class*="smeFlat"] > span { display: inline-block; background-color: rgba(255, 255, 255, 0.8); color: #222222; padding: 0 5px; margin: 0 -4px 0 .5em; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; min-width: 1.5em; }
+
+/* sme flat design
+************************************************/
+[class^="smeFlat"], [class*="smeFlat"] { background-color: #eee; padding: 5px 10px 4px; text-align: center; min-width: 3.3em; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; transition: color 250ms, background-color 100ms; }
+
+a.smeFlatGoogle, a.smeFlatFacebook, a.smeFlatTwitter, a.smeFlatXing { color: #fff; }
+
+a.smeFlatGoogle:hover, a.smeFlatGoogle:focus, a.smeFlatFacebook:hover, a.smeFlatFacebook:focus, a.smeFlatTwitter:hover, a.smeFlatTwitter:focus { color: #fff; }
+
+.smeFlatGoogle { background-color: #dd4b39; }
+
+.smeFlatFacebook { background-color: #3b559f; }
+
+.smeFlatTwitter { background-color: #00aced; }
+
+.smeFlatXing { background-color: #2d6e7a; }
+
+a[class^="smeFlat"]:hover, a[class^="smeFlat"]:focus, a[class*="smeFlat"]:hover, a[class*="smeFlat"]:focus { background-color: rgba(34, 34, 34, 0.2); color: #222222; }
+
+/* sme button icons
+************************************************/
+[class^="smeFlat"] > i, [class*="smeFlat"] > i { display: inline-block; width: 14px; height: 16px; line-height: 16px; vertical-align: text-top; background-image: url(images/smeIcons.png); background-position: 0 0; background-repeat: no-repeat; margin: -1px 5px 0 0; }
+
+.smeFlatGoogle > i { background-position: 0 0; }
+
+.smeFlatFacebook > i { background-position: -24px 0; }
+
+.smeFlatTwitter > i { background-position: -48px 0; }
+
+.smeFlatPinterest > i { background-position: -72px 0; }
+
+.smeFlatLinkedin > i { background-position: -96px 0; }
+
+.smeFlatXing > i { background-position: -120px 0; }
+
+@media only screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2) { [class^="smeFlat"] > i, [class*="smeFlat"] > i { background-size: 109px 63px; }
+  .smeFlatGoogle > i { background-position: 0 -26px; }
+  .smeFlatFacebook > i { background-position: -19px -26px; }
+  .smeFlatTwitter > i { background-position: -38px -26px; }
+  .smeFlatPinterest > i { background-position: -57px -26px; }
+  .smeFlatLinkedin > i { background-position: -76px -26px; }
+  .smeFlatXing > i { background-position: -95px -26px; } }

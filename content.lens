@@ -24,6 +24,7 @@
       	</koken:not>
   		</koken:content_image>
   		<koken:asset file="css/leaflet.css" />
+  		
   	</koken:head>
 	<article id="content">
 		<div class="col-sm-12">
@@ -70,7 +71,7 @@
 		      			<div class="panel panel-default" style="margin-top: 20px">
 	  							<div class="panel-body" style="padding: 0px 10px 5px 10px">
 		    						<h5><i class="icon-share-alt"></i>&nbsp;Teilen</h5>
-		    						<koken:include file="_includes/share-content.html" />
+		    						<koken:include file="_includes/sme.php" />
 	  							</div>
 							</div>
 	      			</div>
