@@ -1,7 +1,7 @@
 <?php 
 function smeDebug($type, $ch, $data)
 {
-	$handle = fopen("/sme.log","a");
+	$handle = fopen("sme.log","a");
 	fwrite($handle, ">>".$type."<<\n");
 	fwrite($handle, "CURL: ".curl_error($ch));
 	fwrite($handle, "DATA: ".$data);
