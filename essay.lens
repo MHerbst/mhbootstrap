@@ -23,7 +23,7 @@
    </koken:head>
    <article id="essay">
  		<div class="row">
-   		<div class="col-sm-8 col-md-9">
+   		<div class="col-sm-8 col-md-9 essaybody">
 				<header>
 					<h1 class="inverse"><span>{{ essay.title }}</span><span class="pull-right"><koken:link title="Permalink"><i class="icon-link"></i></koken:link></span></h1>
 				</header>
