@@ -56,9 +56,7 @@
       		<h2><i class="icon-tags"></i> Tags</h2>
       		<div class="taglist inner">
         			<koken:loop>
-    						<koken:link to="archive_essays">
-              			<span class="label tag">{{ title }}</span> 
-            			</koken:link>
+    					<koken:link class="label tag">{{ title }}</koken:link>
           		</koken:loop>
 				</div>
 			</koken:load>
