@@ -106,11 +106,15 @@
 								</div>
 							</div>
 				     		<koken:iptc>
-  									<meta itemProp="contentLocation" content="{{ iptc.city }} {{ iptc.country }}" >
+  								<meta itemProp="contentLocation" content="{{ iptc.city }} {{ iptc.country }}" >
 				     			<koken:variable name="land" value="{{ iptc.country }}" />
 				     			<koken:variable name="stadt" value="{{ iptc.city }}" />
 				     		</koken:iptc>
 							<koken:geolocation>
+								<span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+								<meta itemprop="latitude" content="{{ geolocation.latitude }}" />
+    							<meta itemprop="longitude" content="{{ geolocation.longitude }}" />
+								</span>
 								<script>
 									$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 										  //alert(e.target);
