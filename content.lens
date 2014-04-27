@@ -27,17 +27,17 @@
   		
   	</koken:head>
 	<article id="content">
-		<div class="col-sm-12">
+		<div class="col-sm-12" itemscope itemtype="http://schema.org/ImageObject">
 			<header>
 				<h1 class="inverse">
-					<span>{{ content.title | content.caption }}</span>
+					<span itemprop="name">{{ content.title | content.caption }}</span>
 	        		<span style="float: right; ">
 						<koken:link title="Diashow" lightbox="true" bind_to_key="l"><i class="icon-resize-full"></i></koken:link>
 					</span>
 				</h1>
 			</header>  
 			<div class="fullbox">
-	     		<koken:content_image><koken:link lightbox="true" bind_to_key="l"><koken:img lazy="true" /></koken:link></koken:content_image>
+	     		<koken:content_image><koken:link lightbox="true" bind_to_key="l"><koken:img lazy="true" itemprop="contentURL" /></koken:link></koken:content_image>
 	     		<koken:content_video><koken:video /></koken:content_video>
      			<ul class="pager">
       			<koken:previous>
@@ -51,7 +51,7 @@
       		</ul>  	
 				<aside>
 	      		<div class="row" style="padding: 10px 10px 0 10px;margin-bottom: 10px">
-	      			<div class="col-sm-6">
+	      			<div class="col-sm-6" itemprop="description">
            				{{ content.caption paragraphs="true" }}
            				<ul style="padding-left: 0;margin-top: 40px">
             				<koken:categories>
@@ -95,9 +95,9 @@
 		       					</div>
 	            				<div class="col-xs-6">
 		            				<table class="table table-condensed">
-		            					<tr><td class="detfirstcol">Fotograf:</td><td>Martin Herbst</td></tr>
-		            					<tr><td class="detfirstcol">Aufgenommen:</td><td><koken:time data="content.captured_on" show="date" /></td></tr>
-		            					<tr><td class="detfirstcol">Veröffentlicht:</td><td><koken:time data="content.modified_on" show="date" /></td></tr>
+		            					<tr><td class="detfirstcol" itemprop="author">Fotograf:</td><td>Martin Herbst</td></tr>
+		            					<tr><td class="detfirstcol">Aufgenommen:</td><td><koken:time data="content.captured_on" show="date" itemprop="dateCreated" /></td></tr>
+		            					<tr><td class="detfirstcol">Veröffentlicht:</td><td><koken:time data="content.modified_on" show="date" itemprop="datePublished" /></td></tr>
 		            				</table>
 	            				</div>
 	       					</div>
@@ -106,6 +106,7 @@
 								</div>
 							</div>
 				     		<koken:iptc>
+  									<meta itemProp="contentLocation" content="{{ iptc.city }} {{ iptc.country }}" >
 				     			<koken:variable name="land" value="{{ iptc.country }}" />
 				     			<koken:variable name="stadt" value="{{ iptc.city }}" />
 				     		</koken:iptc>
