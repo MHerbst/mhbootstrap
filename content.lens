@@ -51,8 +51,8 @@
       		</ul>  	
 				<aside>
 	      		<div class="row" style="padding: 10px 10px 0 10px;margin-bottom: 10px">
-	      			<div class="col-sm-6" itemprop="description">
-           				{{ content.caption paragraphs="true" }}
+	      			<div class="col-sm-6" >
+           				<span itemprop="description">{{ content.caption paragraphs="true" }}</span>
            				<ul style="padding-left: 0;margin-top: 40px">
             				<koken:categories>
             					<li style="margin-bottom: 10px"><i class="icon-folder-open"></i>&nbsp;
@@ -95,7 +95,7 @@
 		       					</div>
 	            				<div class="col-xs-6">
 		            				<table class="table table-condensed">
-		            					<tr><td class="detfirstcol" itemprop="author">Fotograf:</td><td>Martin Herbst</td></tr>
+		            					<tr><td class="detfirstcol">Fotograf:</td><td itemprop="author">Martin Herbst</td></tr>
 		            					<tr><td class="detfirstcol">Aufgenommen:</td><td><koken:time data="content.captured_on" show="date" itemprop="dateCreated" /></td></tr>
 		            					<tr><td class="detfirstcol">Veröffentlicht:</td><td><koken:time data="content.modified_on" show="date" itemprop="datePublished" /></td></tr>
 		            				</table>
