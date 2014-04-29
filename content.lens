@@ -112,10 +112,10 @@
 				     		</koken:iptc>
 							<koken:geolocation>
 								<span itemProp="contentLocation" itemscope itemtype="http://schema.org/Place">
-								<span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
-								<meta itemprop="latitude" content="{{ geolocation.latitude }}" />
-    							<meta itemprop="longitude" content="{{ geolocation.longitude }}" />
-    							</span>
+									<span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+										<meta itemprop="latitude" content="{{ geolocation.latitude }}" />
+    									<meta itemprop="longitude" content="{{ geolocation.longitude }}" />
+    								</span>
 								</span>
 								<script>
 									$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {

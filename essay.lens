@@ -22,13 +22,13 @@
     	</koken:not>
    </koken:head>
    <article id="essay">
- 		<div class="row">
+ 		<div class="row" itemscope itemtype="http://schema.org/Article">
    		<div class="col-sm-8 col-md-9 essaybody">
 				<header>
-					<h1 class="inverse"><span>{{ essay.title }}</span><span class="pull-right"><koken:link title="Permalink"><i class="icon-link"></i></koken:link></span></h1>
+					<h1 class="inverse"><span itemprop="name">{{ essay.title }}</span><span class="pull-right"><koken:link title="Permalink" itemprop="url"><i class="icon-link"></i></koken:link></span></h1>
 				</header>
 				<div class="fullbox">
-					<div class="text">
+					<div class="text" itemprop="articleBody">
 		   			{{ essay.content }}
 		   		</div>
 		      	<ul class="pager">
@@ -48,8 +48,8 @@
             	<h2><i class="icon-info"></i> Details</h2>
             	<div class="inner">
             		<table class="table table-condensed">
-            			<tr><td class="firstcol"><i class="icon-user"></i> Autor:</td><td>Martin Herbst</td></tr>
-		 					<tr><td class="firstcol"><i class="icon-calendar"></i> Veröffentlicht:</td><td><koken:time data="essay.published_on" show="date" /></td></tr>
+            			<tr><td class="firstcol"><i class="icon-user"></i> Autor:</td><td><td itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Martin Herbst</span></td></tr>
+		 					<tr><td class="firstcol"><i class="icon-calendar"></i> Veröffentlicht:</td><td><koken:time data="essay.published_on" show="date" itemprop="datePublished" /></td></tr>
             			<tr><td class="firstcol"><i class="icon-calendar"></i> Geändert:</td><td><koken:time data="essay.modified_on" show="date" /></td></tr>
             		</table>
             	</div>
