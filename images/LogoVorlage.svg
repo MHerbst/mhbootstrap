@@ -25,8 +25,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="416.30329"
-     inkscape:cy="927.72977"
+     inkscape:cx="291.49895"
+     inkscape:cy="899.4455"
      inkscape:document-units="px"
      inkscape:current-layer="g3828"
      showgrid="false"
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -55,38 +55,34 @@
        id="g3828"
        transform="matrix(0.42832627,0,0,0.42832627,25.989153,53.395744)">
       <g
-         id="g4909"
-         transform="matrix(1.1956256,0,0,1.1956256,-175.88226,-69.552965)"
-         inkscape:export-filename="G:\WebServer\xampp\htdocs\koken\storage\themes\mhbootstrap\images\mherbst-logo.png"
+         id="g3767"
          inkscape:export-xdpi="96"
          inkscape:export-ydpi="96">
         <g
-           id="g4901">
-          <g
-             id="g4905">
-            <text
-               sodipodi:linespacing="125%"
-               id="text4877"
-               y="278.71393"
+           transform="matrix(1.1956256,0,0,1.1956256,-175.88226,-69.552965)"
+           id="g4905">
+          <text
+             xml:space="preserve"
+             style="font-size:93.38674927px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#3377b1;fill-opacity:1;stroke:none;font-family:Lucida Sans;-inkscape-font-specification:Lucida Sans"
+             x="646.72858"
+             y="278.71393"
+             id="text4877"
+             sodipodi:linespacing="125%"><tspan
+               sodipodi:role="line"
+               id="tspan4879"
                x="646.72858"
-               style="font-size:93.38674927px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#3377b1;fill-opacity:1;stroke:none;font-family:Lucida Sans;-inkscape-font-specification:Lucida Sans"
-               xml:space="preserve"><tspan
-                 style="font-size:112.06410217px;font-weight:bold;fill:#3377b1;fill-opacity:1;-inkscape-font-specification:Lucida Sans Bold"
-                 y="278.71393"
-                 x="646.72858"
-                 id="tspan4879"
-                 sodipodi:role="line">  Herbst</tspan></text>
-          </g>
+               y="278.71393"
+               style="font-size:112.06410217px;font-weight:bold;fill:#3377b1;fill-opacity:1;-inkscape-font-specification:Lucida Sans Bold">  Herbst</tspan></text>
         </g>
         <text
            sodipodi:linespacing="125%"
            id="text4897"
-           y="278.68109"
-           x="655.35065"
-           style="font-size:112.06410217px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#009200;fill-opacity:1;stroke:none;font-family:Lucida Sans;-inkscape-font-specification:Sans Bold"
+           y="263.64529"
+           x="607.67175"
+           style="font-size:133.98670959px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#9bc4e3;fill-opacity:1;stroke:none;font-family:Lucida Sans;-inkscape-font-specification:Sans Bold"
            xml:space="preserve"><tspan
-             y="278.68109"
-             x="655.35065"
+             y="263.64529"
+             x="607.67175"
              id="tspan4899"
              sodipodi:role="line">M</tspan></text>
       </g>

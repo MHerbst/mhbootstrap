@@ -2,8 +2,8 @@
 	<div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px">
 		<div class="text fullbox">
 			<koken:discussion>
-		      {{ discussion }}
-	   	</koken:discussion>
-	   </div>
+				{{ discussion }}
+			</koken:discussion>
+		</div>
 	</div>
 </div>

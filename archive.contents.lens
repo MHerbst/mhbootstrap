@@ -9,55 +9,54 @@
 				<div class="fullbox">
 					<section class="row" style="margin-top: 15px">
 						<koken:loop>
-        					<div class="col-xs-12 col-sm-6 col-md-6">
-		        				<div class="boxed image_thumb">
-		        					<figure class="overlay">
-		          					<koken:link title="{{ content.title }} ansehen"><koken:img size="3:2" lazy="true" />
-		            					<figcaption>{{ content.title | content.caption }}</figcaption>
-		          					</koken:link>
-		          				</figure>
-		          			</div>
-          				</div>
-          			</koken:loop>
-        			</section>
+							<div class="col-xs-12 col-sm-6 col-md-6">
+								<div class="boxed image_thumb">
+									<figure class="overlay">
+										<koken:link title="{{ content.title }} ansehen"><koken:img size="3:2" lazy="true" />
+											<figcaption>{{ content.title | content.caption }}</figcaption>
+									</koken:link>
+									</figure>
+								</div>
+							</div>
+						</koken:loop>
+					</section>
 					<koken:include file="_includes/pagination.html" />
 				</div>
 			</div>	
 			<div class="col-md-3">
 				<aside class="sidebar">
 					<koken:load source="archives" summary="true" limit_to="content">
-        				<h2><i class="icon-calendar"></i> Datum</h2>
-        				<ul class="inner">
-          				<koken:loop>
-            				<li><koken:link to="archive_contents"><i class="icon-caret-right"></i>&nbsp;{{ title }} <span class="badge">{{ counts.content }}</span></koken:link></li>
-          				</koken:loop>
-        				</ul>
-      			</koken:load>
+						<h2><i class="icon-calendar"></i> Datum</h2>
+						<ul class="inner">
+							<koken:loop>
+								<li><koken:link to="archive_contents"><i class="icon-caret-right"></i>&nbsp;{{ title }} <span class="badge">{{ counts.content }}</span></koken:link></li>
+							</koken:loop>
+						</ul>
+					</koken:load>
 				</aside>
 				<aside class="sidebar">
-        			<koken:load source="categories" summary="true" limit_to="content" order_by="content_count">
-            		<h2><i class="icon-folder-open"></i> Kategorien</h2>
-           			<ul class="inner">
-            			<koken:loop>
-            				<li><koken:link to="archive_contents"><i class="icon-caret-right"></i>&nbsp;{{ title }} <span class="badge">{{ counts.content }}</span></koken:link></li>
-            			</koken:loop>
-           			</ul>
-        			</koken:load>
+					<koken:load source="categories" summary="true" limit_to="content" order_by="content_count">
+						<h2><i class="icon-folder-open"></i> Kategorien</h2>
+						<ul class="inner">
+							<koken:loop>
+								<li><koken:link to="archive_contents"><i class="icon-caret-right"></i>&nbsp;{{ title }} <span class="badge">{{ counts.content }}</span></koken:link></li>
+							</koken:loop>
+						</ul>
+					</koken:load>
 				</aside>
 				<aside class="sidebar">
-         		<koken:load source="tags" summary="true" limit_to="content" order_by="content_count">
-           			<h2><i class="icon-tags"></i> Tags</h2>
-           			<div class="taglist inner">
-	              		<koken:loop>
-	               		<koken:link to="archive_contents" class="label tag">{{ title }}</koken:link>
-	             		</koken:loop>
-	           		</div>
-	        		</koken:load>
+					<koken:load source="tags" summary="true" limit_to="content" order_by="content_count">
+						<h2><i class="icon-tags"></i> Tags</h2>
+						<div class="taglist inner">
+							<koken:loop>
+								<koken:link to="archive_contents" class="label tag">{{ title }}</koken:link>
+							</koken:loop>
+						</div>
+					</koken:load>
 				</aside>
 				<koken:include file="_includes/adsense.html" />
 			</div>
 		</div>
 	</article>	
 </koken:load>
-
 <koken:include file="_includes/footer.html" />

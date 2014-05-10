@@ -1,61 +1,60 @@
 <div class="row">
-  	<div class="col-sm-8 col-md-9">
-      <div class="row">   
-	   	<koken:load> 
-	      	<koken:loop>
-	         	<div class="col-md-6">
-		         	<div class="boxed">
-		            	<figure >
-		               	<koken:link title="Album '{{ album.title }}' ansehen"><koken:img alt="{{ content.caption }}" fade="true" lazy="true" size="1.5:1" /></koken:link>
-		               	<figcaption><koken:link title="Album '{{ album.title }}' ansehen">{{ album.title }}</koken:link></figcaption>
-		            	</figure>
-		         	</div>
-	         	</div>
-	      	</koken:loop>
-	   	</koken:load>
-		</div>			
-		<!--  koken:include file="_includes/pagination.html" / -->
-   </div> 
-   <div class="col-sm-4 col-md-3">
-   	<aside class="sidebar panel panel-dark">
-    		<koken:dates limit_to="albums"> 
-        		<h2><i class="icon-calendar"></i> Archiv</h2>
-        		<ul class="inner">
-           		<koken:loop>
-            		<li>
-              			<koken:link>
-                			<i class="icon-caret-right"></i>&nbsp;{{ title }}&nbsp;<span class="badge">{{ counts.albums }}</span>
-              			</koken:link>
-            		</li>
-          		</koken:loop>
-        		</ul>
-        	</koken:dates>
-      </aside>
-	   <koken:categories limit_to="albums" order_by="album_count">
-	    	<aside class="sidebar panel panel-dark">
-     			<h2><i class="icon-folder-open"></i> Kategorien</h2>
-       		<ul class="inner">
-         		<koken:loop>
-           			<li>
-             			<koken:link> <!--  to="archive_albums"> -->
-               			<i class="icon-caret-right"></i>&nbsp;{{ title }}&nbsp;<span class="badge">{{ category.counts.albums }}</span>
-             			</koken:link>
-           			</li>
-         		</koken:loop>
-       		</ul>
-       	</aside>
-     	</koken:categories>
-     	<koken:load source="tags" summary="true" limit_to="albums" order_by="album_count">
-     	  	<aside class="sidebar panel panel-dark">
-     			<h2><i class="icon-tags"></i> Tags</h2>
-     			<div class="taglist inner">
-        			<koken:loop>
-     					<koken:link class="label tag">{{ title }}</koken:link>
-           		</koken:loop>
+	<div class="col-sm-8 col-md-9">
+		<div class="row">
+			<koken:load> 
+			<koken:loop>
+				<div class="col-md-6">
+					<div class="boxed">
+						<figure>
+							<koken:link title="Album '{{ album.title }}' ansehen"><koken:img alt="{{ content.caption }}" fade="true" lazy="true" size="1.5:1" /></koken:link>
+							<figcaption><koken:link title="Album '{{ album.title }}' ansehen">{{ album.title }}</koken:link></figcaption>
+						</figure>
+					</div>
 				</div>
+			</koken:loop>
+			</koken:load>
+		</div>
+	</div> 
+	<div class="col-sm-4 col-md-3">
+		<aside class="sidebar panel panel-dark">
+			<koken:dates limit_to="albums"> 
+				<h2><i class="icon-calendar"></i> Archiv</h2>
+				<ul class="inner">
+					<koken:loop>
+					<li>
+						<koken:link>
+							<i class="icon-caret-right"></i>&nbsp;{{ title }}&nbsp;<span class="badge">{{ counts.albums }}</span>
+						</koken:link>
+					</li>
+ 					</koken:loop>
+				</ul>
+			</koken:dates>
+		</aside>
+		<koken:categories limit_to="albums" order_by="album_count">
+			<aside class="sidebar panel panel-dark">
+				<h2><i class="icon-folder-open"></i> Kategorien</h2>
+				<ul class="inner">
+					<koken:loop>
+					<li>
+						<koken:link> <!--  to="archive_albums"> -->
+							<i class="icon-caret-right"></i>&nbsp;{{ title }}&nbsp;<span class="badge">{{ category.counts.albums }}</span>
+						</koken:link>
+					</li>
+					</koken:loop>
+				</ul>
 			</aside>
+		</koken:categories>
+		<koken:load source="tags" summary="true" limit_to="albums" order_by="album_count">
+		<aside class="sidebar panel panel-dark">
+			<h2><i class="icon-tags"></i> Tags</h2>
+			<div class="taglist inner">
+				<koken:loop>
+					<koken:link class="label tag">{{ title }}</koken:link>
+				</koken:loop>
+			</div>
+		</aside>
 		</koken:load>
 		<koken:include file="_includes/adsense.html" />
-  	</div>
- </div>
+	</div>
+</div>
 <koken:keyboard_scroll element="div.item" />

@@ -1,43 +1,29 @@
 <koken:pagination>
 <div class="row">
 	<div class="paginationframe">
-	  <ul class="pagination">
-	    <koken:if condition="{{ page }} > 1">
-	      <li>
-	        <koken:link data="previous_page" title="Seite {{ previous_page.number }}">
-	          &laquo;
-	        </koken:link>
-	      </li>
-	    <koken:else>
-	      <li class="disabled">
-	        <a href="#">&laquo;</a>
-	      </li>
-	    </koken:if>
-	
-	    <koken:loop>
-	      <koken:if condition="{{ is_current }}">
-	        <li class="active">
-	      <koken:else>
-	        <li>
-	      </koken:if>
-	        <koken:link title="Seite {{ number }}">
-	          {{ number }}
-	        </koken:link>
-	      </li>
-	    </koken:loop>
-	
-	    <koken:if condition="{{ page }} < {{ pages }}">
-	      <li>
-	        <koken:link data="next_page" title="Seite {{ next_page.number }}">
-	          &raquo;
-	        </koken:link>
-	      </li>
-	    <koken:else>
-	      <li class="disabled">
-	        <a href="#">&raquo;</a>
-	      </li>
-	    </koken:if>
-	  </ul>
+		<ul class="pagination">
+			<koken:if condition="{{ page }} > 1">
+				<li>
+					<koken:link data="previous_page" title="Seite {{ previous_page.number }}">&laquo;</koken:link>
+				</li>
+			<koken:else>
+				<li class="disabled"><a href="#">&laquo;</a></li>
+			</koken:if>
+			<koken:loop>
+				<koken:if condition="{{ is_current }}">
+					<li class="active">
+				<koken:else>
+					<li>
+				</koken:if>
+				<koken:link title="Seite {{ number }}">{{ number }}</koken:link>
+				</li>
+			</koken:loop>
+			<koken:if condition="{{ page }} < {{ pages }}">
+				<li><koken:link data="next_page" title="Seite {{ next_page.number }}">&raquo;</koken:link></li>
+			<koken:else>
+				<li class="disabled"><a href="#">&raquo;</a></li>
+	 		</koken:if>
+		</ul>
 	</div>
 </div>  
 </koken:pagination>

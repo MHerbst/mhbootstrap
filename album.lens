@@ -1,29 +1,29 @@
 <koken:include file="_includes/header.html" />
 <koken:load  limit="12">
-  <koken:head>
-  		<meta name="description" content="{{ album.summary | album.description strip_html="true" truncate="160" }}" />
-  		<meta name="keywords" content="{{ album.tags }}" />
-    	<meta property="og:site_name" content="{{ site.title }}" />
-    	<meta property="og:title" content="{{ album.title strip_html="true" }}" />
-    	<meta property="og:description" content="{{ album.summary | album.description strip_html="true" }}" />
-    	<meta property="og:type" content="website" />
-    	<meta property="og:url" content="{{ album.url }}" />
-    	<koken:covers><koken:shift>
-	   	<meta property="og:image" content="{{ content.presets.medium_large.url }}" />
-	   	<meta property="og:image:width" content="{{ content.presets.medium_large.width }}" />
-	   	<meta property="og:image:height" content="{{ content.presets.medium_large.height }}" />
-    	</koken:shift></koken:covers>
-    	<koken:not empty="profile.twitter">
-      	<meta name="twitter:card" content="gallery" />
-      	<meta name="twitter:site" content="@{{ profile.twitter }}" />
-      	<meta name="twitter:creator" content="@{{ profile.twitter }}" />
-      	<koken:covers minimum="4" limit="4">
-	        	<koken:loop>
-	         	<meta name="twitter:image{{ index }}" content="{{ content.presets.medium_large.cropped.url }}">
-	        	</koken:loop>
-      	</koken:covers>
-    	</koken:not>
-  	</koken:head>
+	<koken:head>
+		<meta name="description" content="{{ album.summary | album.description strip_html="true" truncate="160" }}" />
+		<meta name="keywords" content="{{ album.tags }}" />
+		<meta property="og:site_name" content="{{ site.title }}" />
+		<meta property="og:title" content="{{ album.title strip_html="true" }}" />
+		<meta property="og:description" content="{{ album.summary | album.description strip_html="true" }}" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="{{ album.url }}" />
+		<koken:covers><koken:shift>
+			<meta property="og:image" content="{{ content.presets.medium_large.url }}" />
+			<meta property="og:image:width" content="{{ content.presets.medium_large.width }}" />
+			<meta property="og:image:height" content="{{ content.presets.medium_large.height }}" />
+		</koken:shift></koken:covers>
+		<koken:not empty="profile.twitter">
+			<meta name="twitter:card" content="gallery" />
+			<meta name="twitter:site" content="@{{ profile.twitter }}" />
+			<meta name="twitter:creator" content="@{{ profile.twitter }}" />
+			<koken:covers minimum="4" limit="4">
+				<koken:loop>
+					<meta name="twitter:image{{ index }}" content="{{ content.presets.medium_large.cropped.url }}">
+				</koken:loop>
+			</koken:covers>
+		</koken:not>
+	</koken:head>
 	<article id="album">
 		<div class="row">
 			<div class="col-md-9">
@@ -32,81 +32,79 @@
 					<koken:link lightbox="true" bind_to_key="l" title="Diashow"><i class="icon-resize-full"></i></koken:link></span></h1>
 				</header>
 				<div class="fullbox">
-   				<section class="row" style="margin-top: 15px">
-	   				<koken:loop>
-	      				<div class="col-xs-12 col-sm-6 col-md-6">
-	        					<div class="boxed image_thumb">
-	         					<figure class="overlay">
-		           					<koken:link>
-		           						<koken:img alt="{{ content.title | content.caption }}" crop="true" lazy="true"  />  <!-- size="3:2" var vorher -->
-		         						<figcaption>{{ content.title | content.caption }}</figcaption>
-		         					</koken:link>
-	               			</figure>
-	            			</div>
-	         			</div>
-	      			</koken:loop>
-	   			</section>
+					<section class="row" style="margin-top: 15px">
+						<koken:loop>
+							<div class="col-xs-12 col-sm-6 col-md-6">
+								<div class="boxed image_thumb">
+									<figure class="overlay">
+										<koken:link>
+											<koken:img alt="{{ content.title | content.caption }}" crop="true" lazy="true"  />  <!-- size="3:2" var vorher -->
+											<figcaption>{{ content.title | content.caption }}</figcaption>
+										</koken:link>
+									</figure>
+								</div>
+							</div>
+						</koken:loop>
+					</section>
 					<koken:include file="_includes/pagination.html" />
 				</div>
 				<ul class="pager">
-	   			<koken:previous>
-	      			<li class="previous"><koken:link title="Album {{ album.title }}"><i class="icon-arrow-left"></i> {{ album.title }}</koken:link></li>
-	      		</koken:previous>
-	      		<li><koken:link to="albums" bind_to_key="up">Alle Alben</koken:link></li>
-	      		<koken:next>
-	      		   <li class="next"><koken:link title="Album {{ album.title }}">{{ album.title }} <i class="icon-arrow-right"></i></koken:link></li>
-	      		</koken:next>
+					<koken:previous>
+						<li class="previous"><koken:link title="Album {{ album.title }}"><i class="icon-arrow-left"></i> {{ album.title }}</koken:link></li>
+					</koken:previous>
+					<li><koken:link to="albums" bind_to_key="up">Alle Alben</koken:link></li>
+					<koken:next>
+						<li class="next"><koken:link title="Album {{ album.title }}">{{ album.title }} <i class="icon-arrow-right"></i></koken:link></li>
+					</koken:next>
 				</ul>
 			</div>
 			<div class="col-md-3">
 				<aside class="sidebar panel panel-dark">
-            	<h2><i class="icon-info"></i> Details</h2>
+				<h2><i class="icon-info"></i> Details</h2>
 					<div class="inner">
 						{{ album.description paragraphs="true" }}
 						<table class="table table-condensed">
-						   <tr><td class="firstcol"><i class="icon-user"></i> Erstellt von:</td><td>Martin Herbst</td></tr>
+							<tr><td class="firstcol"><i class="icon-user"></i> Erstellt von:</td><td>Martin Herbst</td></tr>
 							<tr><td class="firstcol"><i class="icon-picture"></i> # Bilder:</td><td>{{ album.counts.images }}</td></tr>
-   	         		<tr><td class="firstcol"><i class="icon-calendar"></i> Veröffentlicht:</td><td><koken:time data="album.created_on" show="date" /></td></tr>
-      	      		<tr><td class="firstcol"><i class="icon-calendar"></i> Geändert:</td><td><koken:time data="album.modified_on" show="date" /></td></tr>
-         	   	</table>
-         	   </div>
-         	</aside>
-           	<aside class="sidebar panel panel-dark">
-            	<h2><i class="icon-share-alt"></i> Teilen</h2>
-            	<ul class="inner">
-            		<koken:include file="_includes/sme.php" />
-          		</ul>
-          	</aside>
-          	<koken:categories>
-          	  	<aside class="sidebar panel panel-dark">
-	            	<h2><i class="icon-folder-open"></i> Kategorien</h2>
-	           		<ul class="inner">
-	            		<koken:loop>
-	            			<li><koken:link><i class="icon-caret-right"></i>&nbsp;{{ category.title }}</koken:link></li>
-	            		</koken:loop>
-	           		</ul>
-	           	</aside>
-        		</koken:categories>
-	         <koken:tags>
-	         	<aside class="sidebar panel panel-dark">
-            		<h2><i class="icon-tags"></i> Tags</h2>
-              		<div class="taglist inner">
-		              	<koken:loop>
-		               	<koken:link class="label tag">{{ tag.title }}</koken:link>
-		             	</koken:loop>
-	            	</div>
-	            </aside>
-	         </koken:tags>
-	         <koken:topics>
-	           	<aside class="sidebar panel panel-dark">
-            		<h2><i class="icon-external-link"></i> Referenzen</h2>
-           			<ul class="inner">
-         				<koken:loop>
-           					<li><koken:link><i class="icon-caret-right"></i>&nbsp;{{ essay.title }}</koken:link></li>
-         				</koken:loop>
-       				</ul>
-       			</aside>
-        		</koken:topics>
+							<tr><td class="firstcol"><i class="icon-calendar"></i> Veröffentlicht:</td><td><koken:time data="album.created_on" show="date" /></td></tr>
+							<tr><td class="firstcol"><i class="icon-calendar"></i> Geändert:</td><td><koken:time data="album.modified_on" show="date" /></td></tr>
+						</table>
+					</div>
+				</aside>
+				<aside class="sidebar panel panel-dark">
+					<h2><i class="icon-share-alt"></i> Teilen</h2>
+					<ul class="inner">
+						<koken:include file="_includes/sme.php" />
+					</ul>
+				</aside>
+				<koken:categories>
+				<aside class="sidebar panel panel-dark">
+					<h2><i class="icon-folder-open"></i> Kategorien</h2>
+					<ul class="inner">
+						<koken:loop>
+							<li><koken:link><i class="icon-caret-right"></i>&nbsp;{{ category.title }}</koken:link></li>
+						</koken:loop>
+					</ul>
+				</aside>
+				</koken:categories>
+				<koken:tags>
+					<aside class="sidebar panel panel-dark">
+						<h2><i class="icon-tags"></i> Tags</h2>
+						<div class="taglist inner">
+							<koken:loop><koken:link class="label tag">{{ tag.title }}</koken:link></koken:loop>
+						</div>
+					</aside>
+				</koken:tags>
+				<koken:topics>
+					<aside class="sidebar panel panel-dark">
+						<h2><i class="icon-external-link"></i> Referenzen</h2>
+						<ul class="inner">
+							<koken:loop>
+								<li><koken:link><i class="icon-caret-right"></i>&nbsp;{{ essay.title }}</koken:link></li>
+							</koken:loop>
+						</ul>
+					</aside>
+				</koken:topics>
 				<koken:include file="_includes/adsense.html" />
 			</div>
 		</div>
