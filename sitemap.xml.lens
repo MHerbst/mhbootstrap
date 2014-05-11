@@ -1,43 +1,54 @@
-<koken:include file="_includes/sitemappart.html" />
+<koken:variable name="m1" value="<" />
+<koken:variable name="m2" value="?" />
+{{ m1 }}{{ m2 }}xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <koken:load source="essays">
-   <koken:loop>
-   <url>
-      <loc>{{ essay.url }}</loc>
-      <lastmod>{{ essay.modified_on.timestamp date_format="Y-m-d"}}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.5</priority>
-   </url>  
-	</koken:loop>
+<koken:loop>
+<url>
+	<loc>{{ essay.url }}</loc>
+	<lastmod>{{ essay.modified_on.timestamp date_format="Y-m-d"}}</lastmod>
+	<changefreq>weekly</changefreq>
+	<priority>0.5</priority>
+</url>  
+</koken:loop>
 </koken:load>
 <koken:load source="pages">
-	<koken:loop>
-   <url>
-      <loc>{{ page.url }}</loc>
-      <lastmod>{{ page.modified_on.timestamp date_format="Y-m-d"}}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.6</priority>
-   </url>	
-	</koken:loop>
+<koken:loop>
+<url>
+	<loc>{{ page.url }}</loc>
+	<lastmod>{{ page.modified_on.timestamp date_format="Y-m-d"}}</lastmod>
+	<changefreq>weekly</changefreq>
+	<priority>0.6</priority>
+</url>	
+</koken:loop>
 </koken:load>
 <koken:load source="albums">
-	<koken:loop>
-   <url>
-      <loc>{{ album.url }}</loc>
-      <lastmod>{{ album.created_on.timestamp date_format="Y-m-d"}}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.6</priority>
-   </url>	
-	</koken:loop>
+<koken:loop>
+<url>
+	<loc>{{ album.url }}</loc>
+	<lastmod>{{ album.created_on.timestamp date_format="Y-m-d"}}</lastmod>
+	<changefreq>weekly</changefreq>
+	<priority>0.6</priority>
+</url>	
+</koken:loop>
 </koken:load>
 <koken:load source="contents">
-	<koken:loop>
-   <url>
-      <loc>{{ content.url }}</loc>
-      <lastmod>{{ content.captured_on date_format="Y-m-d"}}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.6</priority>
-   </url>	
-	</koken:loop>
+<koken:loop>
+<url>
+	<loc>{{ content.url }}</loc>
+	<lastmod>{{ content.captured_on date_format="Y-m-d"}}</lastmod>
+	<changefreq>weekly</changefreq>
+	<priority>0.6</priority>
+	<image:image>
+		<image:loc>{{ content.presets.medium.url }}</image:loc>
+		<image:title>{{ content.title | content.caption }}</image:title>
+		<image:caption>{{ content.caption | content.title }}</image:caption>
+		<koken:iptc>
+		<koken:not empty="iptc.city"><image:geo_location>{{ iptc.city }}<koken:not empty="iptc.country">, {{ iptc.country }}</koken:not></image:geo_location></koken:not>
+		</koken:iptc>
+		<image:license>http://creativecommons.org/licenses/by-nc-sa/3.0/</image:license>
+	</image:image>
+</url>	
+</koken:loop>
 </koken:load>
 </urlset>
