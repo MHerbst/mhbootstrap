@@ -19,7 +19,7 @@
 		<meta name="twitter:image" content="{{ essay.featured_image.presets.medium_large.url }}" />
 	</koken:not>
 </koken:head>
-<article id="essay">
+<article id="essay" class="col-xs-12 col-lg-10 col-lg-offset-1">
 	<div class="row" itemscope itemtype="http://schema.org/Article">
 		<div class="col-sm-8 col-md-9 essaybody">
 			<header>
