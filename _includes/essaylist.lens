@@ -23,7 +23,7 @@
 		<koken:include file="_includes/pagination.html" />
 	</div> 
 	<div class="col-sm-4 col-md-3">
-		<aside class="sidebar panel panel-dark">
+		<aside class="sidebar panel panel-dark hidden-print">
 			<koken:dates limit_to="essays">
 				<h2><i class="icon-calendar"></i> Archiv</h2>
 				<ul class="inner">
@@ -37,7 +37,7 @@
 				</ul>
 			</koken:dates>
 		</aside>
-		<aside class="sidebar panel panel-dark"> 
+		<aside class="sidebar panel panel-dark hidden-print"> 
 			<koken:load source="categories" summary="true" limit_to="essays" order_by="essay_count">
 				<h2><i class="icon-folder-open"></i> Kategorien</h2>
 				<ul class="inner">
@@ -51,7 +51,7 @@
 				</ul>
 			</koken:load>
 		</aside>
-		<aside class="sidebar panel panel-dark">
+		<aside class="sidebar panel panel-dark hidden-print">
 			<koken:load source="tags" summary="true" limit_to="essays" order_by="essay_count">
 				<h2><i class="icon-tags"></i> Tags</h2>
 				<div class="taglist inner">

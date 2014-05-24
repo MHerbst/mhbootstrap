@@ -1,8 +1,6 @@
 <koken:include file="_includes/header.html" />
 <koken:load>
 <koken:head>
-	<meta name="description" content="{{ essay.excerpt | essay.content strip_html="true" truncate="160" }}" />
-	<meta name="keywords" content="{{ essay.tags }}" />
 	<meta property="og:site_name" content="{{ site.title }}" />
 	<meta property="og:title" content="{{ essay.title strip_html="true" }}" />
 	<meta property="og:description" content="{{ essay.excerpt strip_html="true" }}" />
@@ -25,7 +23,7 @@
 	<div class="row" itemscope itemtype="http://schema.org/Article">
 		<div class="col-sm-8 col-md-9 essaybody">
 			<header>
-				<h1 class="inverse"><span itemprop="name">{{ essay.title }}</span><span class="pull-right"><koken:link title="Permalink" itemprop="url"><i class="icon-link"></i></koken:link></span></h1>
+				<h1 class="inverse"><span itemprop="name">{{ essay.title }}</span><span class="pull-right hidden-print"><koken:link title="Permalink" itemprop="url"><i class="icon-link"></i></koken:link></span></h1>
 			</header>
 			<div class="fullbox">
 				<div class="text" itemprop="articleBody">
@@ -54,14 +52,14 @@
 					</table>
 				</div>
 			</aside>
-			<aside class="sidebar panel panel-dark">
+			<aside class="sidebar panel panel-dark hidden-print">
 				<h2><i class="icon-share-alt"></i> Teilen </h2>
 				<ul class="inner">
 					<koken:include file="_includes/sme.php" />
 				</ul>
 			</aside>
 			<koken:categories>
-				<aside class="sidebar panel panel-dark">
+				<aside class="sidebar panel panel-dark hidden-print">
 					<h2><i class="icon-folder-open"></i> Kategorien</h2>
 					<ul class="inner">
 						<koken:loop>
@@ -71,7 +69,7 @@
 				</aside>
 			</koken:categories>
 			<koken:tags>
-				<aside class="sidebar panel panel-dark">
+				<aside class="sidebar panel panel-dark hidden-print">
 					<h2><i class="icon-tags"></i> Tags</h2>
 					<div class="taglist inner">
 						<koken:loop>
@@ -81,7 +79,7 @@
 				</aside>
 			</koken:tags>
 			<koken:topics>
-				<aside class="sidebar panel panel-dark">
+				<aside class="sidebar panel panel-dark hidden-print">
 					<h2><i class="icon-external-link"></i> Referenzen</h2>
 					<koken:loop>
 						<div class="inner">

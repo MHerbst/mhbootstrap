@@ -2,7 +2,7 @@
 <koken:asset file="js/contact_form.js" />
 <article id="page">
 	<div class="row">
-		<div class="col-md-10 col-md-offset-1">
+		<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
 			<header><h1 class="inverse">Kontaktformular</h1></header>
 			<div class="fullbox text ">
 				<div class="row panel-body">

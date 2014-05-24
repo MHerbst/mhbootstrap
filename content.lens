@@ -1,8 +1,6 @@
 <koken:include file="_includes/header.html" />
 <koken:load>
 	<koken:head>
-		<meta name="description" content="{{ content.caption | content.title strip_html="true" truncate="160" }}" />
-		<meta name="keywords" content="{{ content.tags }}" />
 		<meta property="og:site_name" content="{{ site.title }}" />
 		<meta property="og:title" content="{{ content.title|content.caption strip_html="true" }}" />
 		<meta property="og:description" content="{{ content.caption|content.title strip_html="true" }}" />
@@ -25,12 +23,12 @@
 		</koken:content_image>
 		<koken:asset file="css/leaflet.css" />
 	</koken:head>
-	<article id="content">
-		<div class="col-sm-12" itemscope itemtype="http://schema.org/ImageObject">
+	<article id="content" class="row">
+		<div class="col-xs-12 " itemscope itemtype="http://schema.org/ImageObject">
 			<header>
 				<h1 class="inverse">
 					<span itemprop="name">{{ content.title | content.caption }}</span>
-					<span style="float: right; ">
+					<span style="float: right;" class="hidden-print" >
 						<koken:link title="Diashow" lightbox="true" bind_to_key="l"><i class="icon-resize-full"></i></koken:link>
 					</span>
 				</h1>
@@ -38,7 +36,7 @@
 			<div class="fullbox">
 				<koken:content_image><koken:link lightbox="true" bind_to_key="l"><koken:img lazy="true" itemprop="contentURL" /></koken:link></koken:content_image>
 				<koken:content_video><koken:video /></koken:content_video>
-				<ul class="pager">
+				<ul class="pager hidden-print">
 					<koken:previous>
 						<li class="previous" ><koken:link title="Vorheriges Bild" bind_to_key="left"><i class="icon-arrow-left"></i> zurück</koken:link></li>
 					</koken:previous>
@@ -64,7 +62,7 @@
 								</li>
 							</koken:tags>
 							</ul>		
-							<div class="panel panel-default" style="margin-top: 20px">
+							<div class="panel panel-default hidden-print" style="margin-top: 20px">
 								<div class="panel-body" style="padding: 0px 10px 5px 10px">
 									<h5><i class="icon-share-alt"></i>&nbsp;Teilen</h5>
 									<koken:include file="_includes/sme.php" />
@@ -78,7 +76,7 @@
 							</ul>
 							<div class="tab-content">
 								<div class="tab-pane active" id="home" style="min-height:200px">
-									<div class="col-xs-6">
+									<div class="col-xs-12 col-sm-6">
 										<table class="table table-condensed">
 											<koken:exif>
 												<koken:not empty="exif.model"><tr><td class="detfirstcol">Kamera:</td><td>{{ exif.model }}</td></tr></koken:not>
@@ -89,7 +87,7 @@
 											</koken:exif>
 										</table> 
 									</div>
-									<div class="col-xs-6">
+									<div class="col-xs-12 col-sm-6">
 										<table class="table table-condensed">
 											<tr><td class="detfirstcol">Fotograf:</td><td itemprop="author">Martin Herbst</td></tr>
 											<tr><td class="detfirstcol">Aufgenommen:</td><td><koken:time data="content.captured_on" show="date" itemprop="dateCreated" /></td></tr>
@@ -130,7 +128,7 @@
 							</koken:geolocation>
 						</div>
 					</div>
-					<div class="row" >
+					<div class="row hidden-print" >
 						<div class="col-xs-12">
 							<koken:discussion>
 								{{ discussion }}
@@ -139,7 +137,7 @@
 					</div>
 				</aside>				
 			</div>
-		</div>			
+		</div>	
 	</article>
 </koken:load>
 <koken:asset file="js/leaflet.js" />

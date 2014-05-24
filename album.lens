@@ -1,8 +1,6 @@
 <koken:include file="_includes/header.html" />
 <koken:load  limit="12">
 	<koken:head>
-		<meta name="description" content="{{ album.summary | album.description strip_html="true" truncate="160" }}" />
-		<meta name="keywords" content="{{ album.tags }}" />
 		<meta property="og:site_name" content="{{ site.title }}" />
 		<meta property="og:title" content="{{ album.title strip_html="true" }}" />
 		<meta property="og:description" content="{{ album.summary | album.description strip_html="true" }}" />
@@ -28,7 +26,7 @@
 		<div class="row">
 			<div class="col-md-9">
 				<header>
-					<h1 class="inverse"><span>{{ album.title }}</span><span class="pull-right">
+					<h1 class="inverse"><span>{{ album.title }}</span><span class="pull-right hidden-print">
 					<koken:link lightbox="true" bind_to_key="l" title="Diashow"><i class="icon-resize-full"></i></koken:link></span></h1>
 				</header>
 				<div class="fullbox">
@@ -48,7 +46,7 @@
 					</section>
 					<koken:include file="_includes/pagination.html" />
 				</div>
-				<ul class="pager">
+				<ul class="pager hidden-print">
 					<koken:previous>
 						<li class="previous"><koken:link title="Album {{ album.title }}"><i class="icon-arrow-left"></i> {{ album.title }}</koken:link></li>
 					</koken:previous>
@@ -71,14 +69,14 @@
 						</table>
 					</div>
 				</aside>
-				<aside class="sidebar panel panel-dark">
+				<aside class="sidebar panel panel-dark hidden-print">
 					<h2><i class="icon-share-alt"></i> Teilen</h2>
 					<ul class="inner">
 						<koken:include file="_includes/sme.php" />
 					</ul>
 				</aside>
 				<koken:categories>
-				<aside class="sidebar panel panel-dark">
+				<aside class="sidebar panel panel-dark hidden-print">
 					<h2><i class="icon-folder-open"></i> Kategorien</h2>
 					<ul class="inner">
 						<koken:loop>
@@ -88,7 +86,7 @@
 				</aside>
 				</koken:categories>
 				<koken:tags>
-					<aside class="sidebar panel panel-dark">
+					<aside class="sidebar panel panel-dark hidden-print">
 						<h2><i class="icon-tags"></i> Tags</h2>
 						<div class="taglist inner">
 							<koken:loop><koken:link class="label tag">{{ tag.title }}</koken:link></koken:loop>
@@ -96,7 +94,7 @@
 					</aside>
 				</koken:tags>
 				<koken:topics>
-					<aside class="sidebar panel panel-dark">
+					<aside class="sidebar panel panel-dark hidden-print">
 						<h2><i class="icon-external-link"></i> Referenzen</h2>
 						<ul class="inner">
 							<koken:loop>

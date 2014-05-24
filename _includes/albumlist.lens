@@ -3,7 +3,7 @@
 		<div class="row">
 			<koken:load> 
 			<koken:loop>
-				<div class="col-md-6">
+				<div class="col-xs-6">
 					<div class="boxed">
 						<figure>
 							<koken:link title="Album '{{ album.title }}' ansehen"><koken:img alt="{{ content.caption }}" fade="true" lazy="true" size="1.5:1" /></koken:link>
@@ -16,7 +16,7 @@
 		</div>
 	</div> 
 	<div class="col-sm-4 col-md-3">
-		<aside class="sidebar panel panel-dark">
+		<aside class="sidebar panel panel-dark hidden-print">
 			<koken:dates limit_to="albums"> 
 				<h2><i class="icon-calendar"></i> Archiv</h2>
 				<ul class="inner">
@@ -31,7 +31,7 @@
 			</koken:dates>
 		</aside>
 		<koken:categories limit_to="albums" order_by="album_count">
-			<aside class="sidebar panel panel-dark">
+			<aside class="sidebar panel panel-dark hidden-print">
 				<h2><i class="icon-folder-open"></i> Kategorien</h2>
 				<ul class="inner">
 					<koken:loop>
@@ -45,7 +45,7 @@
 			</aside>
 		</koken:categories>
 		<koken:load source="tags" summary="true" limit_to="albums" order_by="album_count">
-		<aside class="sidebar panel panel-dark">
+		<aside class="sidebar panel panel-dark hidden-print">
 			<h2><i class="icon-tags"></i> Tags</h2>
 			<div class="taglist inner">
 				<koken:loop>
