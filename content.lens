@@ -128,13 +128,8 @@
 							</koken:geolocation>
 						</div>
 					</div>
-					<div class="row hidden-print" >
-						<div class="col-xs-12">
-							<koken:discussion>
-								{{ discussion }}
-							</koken:discussion>
-						</div>
-					</div>
+					<script>var disqus_identifier = "koken_disqus_content_{{ content.id }}";</script>
+					<koken:include file="_includes/discuss.lens" />
 				</aside>				
 			</div>
 		</div>	

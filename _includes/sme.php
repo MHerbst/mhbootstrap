@@ -170,7 +170,7 @@ $templ = Koken::$location['template'];
 $doit = array('go' => true, 'fb' => true, 'tw' => true, "li" => false, "xi" => false, "pi" => true, "ki" => false);
 if ($templ === "essay")
 {
-	$doit['pi'] = false; $doit['ki'] = true;
+	$doit['pi'] = false; $doit['ki'] = false;
 }
 if ($templ === "content")
 {
@@ -187,7 +187,7 @@ else
 $url_enc = urlencode($url);
 $ctr = getSocialData($url, $doit, true);
 ?>
-<section class="smeShare">
+<section class="smeShare" <?php if ($templ != "content") echo 'style="text-align:center"';?>>
 <?php if ($doit['go']) {?>
 	<a href="https://plus.google.com/share?url=<?php echo $url;?>" class="smeFlatGoogle" rel="sme nofollow" data-service="google">
 		<i></i>Google+<span><?php echo $ctr['go'];?></span>

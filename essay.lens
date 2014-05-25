@@ -39,6 +39,7 @@
 					</koken:next>
 				</ul>
 			</div>
+			<script>var disqus_identifier = "koken_essay_content_{{ essay.id }}";</script>
 			<koken:include file="_includes/discuss.lens" />
 		</div>
 		<div class="col-sm-4 col-md-3">
