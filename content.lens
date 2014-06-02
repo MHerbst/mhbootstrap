@@ -33,7 +33,7 @@
 					</span>
 				</h1>
 			</header>
-			<div class="fullbox">
+			<div class="fullbox" style="overflow: hidden;">
 				<koken:content_image><koken:link lightbox="true" bind_to_key="l" data-koken-ignore-responsive="true"><koken:img lazy="true" itemprop="contentURL" /></koken:link></koken:content_image>
 				<koken:content_video><koken:video /></koken:content_video>
 				<ul class="pager hidden-print">
