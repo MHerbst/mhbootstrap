@@ -2,10 +2,10 @@
 <koken:load order_by="captured_on" order_direction="asc" limit="12">
 	<article id="photoarchive">
 		<div class="row">
+			<div class="col-md-12">
+				<header><h1><i class="icon-picture"></i> Fotos {{ archive.type.singular }}: {{ archive.title }}</h1></header>
+			</div>
 			<div class="col-md-9">
-				<header>
-					<h1 class="inverse">Fotos {{ archive.type.singular }}: {{ archive.title }}</h1>
-				</header>
 				<div class="fullbox">
 					<section class="row" style="margin-top: 15px">
 						<koken:loop>

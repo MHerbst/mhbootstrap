@@ -1,7 +1,7 @@
 <koken:include file="_includes/header.html" />
 <koken:load infinite="true">
 	<div id="albumlist">
-		<h1 class="inverse">Fotoalben {{ archive.type.singular case="title" }} {{ archive.title }}</h1>
+		<h1><i class="icon-picture"></i> Fotoalben {{ archive.type.singular case="title" }}: {{ archive.title }}</h1>
 		<koken:include file="_includes/albumlist.lens" />
 	</div>
 </koken:load>

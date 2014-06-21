@@ -48,22 +48,22 @@
 				</ul>	
 				<aside>
 					<div class="row" style="padding: 10px 10px 0 10px;margin-bottom: 10px">
-						<div class="col-sm-6" >
+						<div class="col-sm-6"> 
 							<span itemprop="description">{{ content.caption paragraphs="true" }}</span>
-							<ul style="padding-left: 0;margin-top: 40px">
-							<koken:categories>
-								<li style="margin-bottom: 10px"><i class="icon-folder-open"></i>&nbsp;
-									<koken:loop separator=", "><koken:link>{{ category.title }}</koken:link></koken:loop>
-								</li>
-							</koken:categories>
-							<koken:tags>
-								<li><i class="icon-tags"></i>&nbsp;
-									<koken:loop><koken:link><span class="label tag">{{ tag.title }}</span></koken:link></koken:loop>
-								</li>
-							</koken:tags>
-							</ul>		
-							<div class="panel panel-default hidden-print" style="margin-top: 20px">
+							<div class="panel panel-default hidden-print" style="margin-top: 40px">
 								<div class="panel-body" style="padding: 0px 10px 5px 10px">
+									<ul style="padding-left: 0;margin: 5px 0 15px 0">
+										<koken:categories>
+											<li style="margin-bottom: 10px"><i class="icon-folder-open"></i>&nbsp;
+												<koken:loop separator=", "><koken:link>{{ category.title }}</koken:link></koken:loop>
+											</li>
+										</koken:categories>
+										<koken:tags>
+											<li><i class="icon-tags"></i>&nbsp;
+												<koken:loop><koken:link><span class="label tag">{{ tag.title }}</span></koken:link></koken:loop>
+											</li>
+										</koken:tags>
+									</ul>
 									<h5><i class="icon-share-alt"></i>&nbsp;Teilen</h5>
 									<koken:include file="_includes/sme.php" />
 								</div>
@@ -75,7 +75,7 @@
 								<li><a href="#location" data-toggle="tab"><i class="icon-globe"></i> Aufnahmeort</a></li>
 							</ul>
 							<div class="tab-content">
-								<div class="tab-pane active" id="home" style="min-height:200px">
+								<div class="tab-pane active" id="home" style="min-height:200px;padding-top:5px">
 									<div class="col-xs-12 col-sm-6">
 										<table class="table table-condensed">
 											<koken:exif>

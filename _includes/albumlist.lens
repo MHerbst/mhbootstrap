@@ -3,7 +3,7 @@
 		<div class="row">
 			<koken:load> 
 			<koken:loop>
-				<div class="col-xs-6 col-lg-4" >
+				<div class="col-xs-12 col-sm-6 col-lg-6" >
 					<div class="boxed">
 						<figure>
 							<koken:link title="Album '{{ album.title }}' ansehen"><koken:img alt="{{ content.caption }}" fade="true" lazy="true" size="1.5:1" /></koken:link>

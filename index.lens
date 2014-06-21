@@ -23,7 +23,7 @@
 <section id="latestalbums">
 	<div class="row">
 		<div class="col-xs-12">
-			<h2 class="major inverse">Neue Fotoalben</h2>
+			<h2><i class="icon-picture"></i> Neue Fotoalben</h2>
 		</div>
 	</div>
 	<div class="row">
@@ -44,7 +44,7 @@
 <section id="latestessays">
 	<div class="row">
 		<div class="col-xs-12">
-			<h2 class="major inverse">Neue Artikel</h2>
+			<h2><i class="icon-pencil"></i> Neue Artikel</h2>
 		</div>
 	</div>
 	<div class="row">

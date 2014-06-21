@@ -7,17 +7,17 @@
 			<header>
 				<h2 class="inverse"><koken:link title="Artikel '{{ essay.title }}' lesen">{{ essay.title }}</koken:link></h2>
 			</header>
-			<div class="excerpt" style="position:relative">
+			<div class="excerpt" stylex="position:relative">
 				<koken:featured_image>
-					<div class="pull-left" >
-						<koken:img alt="{{ content.title | content.caption}}" height="140" size="3:2" lazy="true" />
+					<div class="pull-left" data-koken-ignore-responsive="true" >
+						<koken:img alt="{{ content.title | content.caption}}"  width="240"  />
 					</div>
 				</koken:featured_image>
-				<div>
-					{{ essay.content truncate="450" paragraphs="true"}}
-				</div>
-				<div style="position:absolute;bottom:5px;right:10px" class="btn btn-default btn-xs">
-					<koken:link title="{{ essay.title }} weiterlesen"><em>Weiterlesen ...</em></koken:link>
+				<div >
+					{{ essay.content }}
+					<koken:more><koken:link title="{{ essay.title }}">
+						<div class="pull-right" ><em>Weiterlesen <i class="icon-double-angle-right"></i></em></div>
+					</koken:link></koken:more>
 				</div>
 			</div>
 		</article>
