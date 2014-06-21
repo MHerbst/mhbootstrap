@@ -75,9 +75,9 @@
 								<li><a href="#location" data-toggle="tab"><i class="icon-globe"></i> Aufnahmeort</a></li>
 							</ul>
 							<div class="tab-content">
-								<div class="tab-pane active" id="home" style="min-height:200px;padding-top:5px">
+								<div class="tab-pane active" id="home" styley="min-height:200px;padding-top:5px">
 									<div class="col-xs-12 col-sm-6">
-										<table class="table table-condensed">
+										<table class="table table-condensed" style="margin-top: 5px">
 											<koken:exif>
 												<koken:not empty="exif.model"><tr><td class="detfirstcol">Kamera:</td><td>{{ exif.model }}</td></tr></koken:not>
 												<koken:not empty="exif.exposure"><tr><td class="detfirstcol">Belichtung:</td><td>{{ exif.exposure }}</td></tr></koken:not>
@@ -88,7 +88,7 @@
 										</table> 
 									</div>
 									<div class="col-xs-12 col-sm-6">
-										<table class="table table-condensed">
+										<table class="table table-condensed"  style="margin-top: 5px">
 											<tr><td class="detfirstcol">Fotograf:</td><td itemprop="author">Martin Herbst</td></tr>
 											<tr><td class="detfirstcol">Aufgenommen:</td><td><koken:time data="content.captured_on" show="date" itemprop="dateCreated" /></td></tr>
 											<tr><td class="detfirstcol">Veröffentlicht:</td><td><koken:time data="content.modified_on" show="date" itemprop="datePublished" /></td></tr>
@@ -96,7 +96,7 @@
 									</div>
 								</div>
 								<div class="tab-pane" id="location">
-									<div class="inner" id="map" style="height:200px"></div>
+									<div class="inner" id="map" style="height:250px"></div>
 								</div>
 							</div>
 							<koken:iptc>
