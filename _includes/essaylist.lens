@@ -10,7 +10,7 @@
 			<div class="excerpt" stylex="position:relative">
 				<koken:featured_image>
 					<div class="pull-left" data-koken-ignore-responsive="true" >
-						<koken:img alt="{{ content.title | content.caption}}"  width="240"  />
+						<koken:img alt="{{ content.title | content.caption}}" width="240" />
 					</div>
 				</koken:featured_image>
 				<div >
