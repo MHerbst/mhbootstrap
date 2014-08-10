@@ -19,7 +19,7 @@
 	<koken:asset file="css/bootstrap.min.css" />
 	<koken:asset file="css/font-awesome.min.css" />
 	<koken:asset file="css/mhbootstrap.min.css" />
-	<!-- koken:asset file="css/koken-bootstrap.css" /-->
+	<!--  koken:asset file="css/koken-bootstrap.css" />-->
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -33,6 +33,14 @@
 		</div>
 		<div class="collapse navbar-collapse">
 			<koken:navigation class="nav navbar-nav" />
+				<form method="get" class="navbar-form navbar-right" role="search" method="get" action="/search/" style="margin-right: 5px">
+				<div class="input-group" style="max-width:200px;">
+					<input type="search" class="form-control" placeholder="Suchen" value="" name="q" title="Suchen">
+					<span class="input-group-btn">
+						<button class="btn btn-default btn-primary" type="submit"><i class="icon-search"></i></button>
+					</span>
+				</div>
+			</form>		
 		</div>
 	</nav>
 	<div class="container-fluid">
