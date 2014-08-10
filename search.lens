@@ -1,0 +1,28 @@
+<koken:include file="_includes/header.html" />
+<article id="page">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+			<header>
+				<h1 class="inverse">Suchergebnisse</h1>
+			</header>
+			<div class="fullbox text ">
+				<div class="row" style="min-height: 500px">
+<script>
+  (function() {
+    var cx = '003707250976775348452:fdyftakrzxi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>
+<koken:include file="_includes/footer.html" />
