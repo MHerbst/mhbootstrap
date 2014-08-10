@@ -1,4 +1,6 @@
-
+<koken:head>
+  <meta name="robots" content="noindex">
+</koken:head>
 <koken:include file="_includes/header.html" />
 <koken:load infinite="true">
 	<div id="albumlist">
