@@ -1,4 +1,7 @@
 <koken:include file="_includes/header.html" />
+<koken:head>
+  <meta name="robots" content="noindex">
+</koken:head>
 <koken:load order_by="captured_on" order_direction="asc" limit="12">
 	<article id="photoarchive">
 		<div class="row">

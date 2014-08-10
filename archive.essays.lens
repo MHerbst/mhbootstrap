@@ -1,4 +1,7 @@
-<koken:include file="_includes/header.html" />
+﻿<koken:include file="_includes/header.html" />
+<koken:head>
+  <meta name="robots" content="noindex">
+</koken:head>
 <koken:load order_by="created_on" order_direction="desc" limit="6">
 	<div id="essaylist" class="col-xs-12 col-lg-offset-1 col-lg-10" >
 		<h1><i class="icon-pencil"></i> Artikel {{ archive.type.singular case="title" }}: {{ archive.title }}</h1>
