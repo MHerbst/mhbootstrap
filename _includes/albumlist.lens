@@ -1,13 +1,14 @@
 <div class="row">
-	<div class="col-sm-8 col-md-9">
+	<div class="col-sm-8 col-md-9" id="albums">
 		<div class="row">
 			<koken:load> 
 			<koken:loop>
 				<div class="col-xs-12 col-sm-6 col-lg-6" >
 					<div class="boxed">
-						<figure>
-							<koken:link title="Album '{{ album.title }}' ansehen"><koken:img alt="{{ content.caption }}" fade="true" lazy="true" size="1.5:1" /></koken:link>
-							<figcaption><koken:link title="Album '{{ album.title }}' ansehen">{{ album.title }}</koken:link></figcaption>
+						<figure class="overlayLarge">
+							<koken:link title="Album '{{ album.title }}' ansehen"><koken:img alt="{{ content.caption }}" fade="true" lazy="true" size="1.5:1" />
+								<figcaption>{{ album.title }}</figcaption>
+							</koken:link>
 						</figure>
 					</div>
 				</div>

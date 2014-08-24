@@ -29,7 +29,7 @@
 					<h1 class="inverse"><span>{{ album.title }}</span><span class="pull-right hidden-print">
 					<koken:link lightbox="true" bind_to_key="l" title="Diashow"><i class="icon-resize-full"></i></koken:link></span></h1>
 				</header>
-				<div class="fullbox">
+				<div class="fullbox" id="images">
 					<section class="row" style="margin-top: 15px">
 						<koken:loop>
 							<div class="col-xs-6 col-md-6 col-lg-4">

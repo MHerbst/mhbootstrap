@@ -31,9 +31,10 @@
 		<koken:loop>
 		<div class="col-md-6">
 			<div class="boxed">
-				<figure >
-					<koken:link title="Album '{{ album.title }}' öffnen"><koken:img alt="{{ content.caption | content.title }}" fade="true" size="1.5:1" /></koken:link>
-					<figcaption><koken:link title="Album '{{ album.title }}' öffnen">{{ album.title }}</koken:link></figcaption>
+				<figure class="overlayLarge">
+					<koken:link title="Album '{{ album.title }}' öffnen"><koken:img alt="{{ content.caption | content.title }}" fade="true" size="1.5:1" />
+						<figcaption>{{ album.title }}</figcaption>
+					</koken:link>
 				</figure>
 			</div>
 		</div>
