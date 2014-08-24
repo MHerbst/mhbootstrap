@@ -75,7 +75,7 @@
 								<li><a href="#location" data-toggle="tab"><i class="icon-globe"></i> Aufnahmeort</a></li>
 							</ul>
 							<div class="tab-content">
-								<div class="tab-pane active" id="home" styley="min-height:200px;padding-top:5px">
+								<div class="tab-pane active" id="home">
 									<div class="col-xs-12 col-sm-6">
 										<table class="table table-condensed" style="margin-top: 5px">
 											<koken:exif>

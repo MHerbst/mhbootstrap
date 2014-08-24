@@ -1,24 +1,46 @@
 <div class="row">
 	<div class="col-xs-12">
-		<button class="showDisqus hidden-print btn btn-primary" style="margin-left: 10px;margin-top: -20px">Kommentare anzeigen</button>
-		<div class="text fullbox hidden-print" id="disqus_thread"></div>
-		
+		<button class="showComment hidden-print btn btn-primary" style="margin: -30px 0 10px 10px">Kommentare anzeigen</button>
+		<div class="hidden-print commentTab" style="display:none;margin: 0 10px 10px 10px">
+			<ul class="nav nav-tabs" id="tabComments">
+				<li id="tab_disqus"  class="active"><a href="#disqus" data-toggle="tab"><i class="icon-comments"></i>&nbsp;DISQUS</a></li>
+				<li id="tab_google"><a href="#google" data-toggle="tab" ><i class="icon-google-plus"></i> Google+</a></li>
+			</ul>
+			<div class="tab-content" >
+				<div class="tab-pane active" id="disqus" >
+					<div id="disqus_thread"></div>
+				</div>
+				<div class="tab-pane " id="google">
+					<div id="google_comments"> ... wird geladen </div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
+<script async src="https://apis.google.com/js/plusone.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
-	$('.showDisqus').on('click', function(){   // click event of the show comments button
+	$('.showComment').on('click', function(){   // click event of the show comments button
+		$(".commentTab" ).css( "display", "block");
 		var disqus_shortname = 'mherbst';
-                // ajax request to load the disqus javascript
 		$.ajax({
 	         type: "GET",
 	         url: "http://" + disqus_shortname + ".disqus.com/embed.js",
 	         dataType: "script",
 	         cache: true
 	     });
-
-	        $(this).fadeOut();  // remove the show comments button
+      $(this).fadeOut();  // remove the show comments button
+    	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    		var w = document.getElementById('google_comments').offsetWidth;
+  		  	if (e.target.toString().indexOf("#google") > 0) {
+    			gapi.comments.render('google_comments', {
+    				href: window.location,
+    			   width: w,
+    			   first_party_property: 'BLOGGER',
+    			   view_type: 'FILTERED_POSTMOD'
+    			});
+    		}
+  		})
 	});
 });
-
 </script>
