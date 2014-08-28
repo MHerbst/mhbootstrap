@@ -29,7 +29,8 @@
 				<div class="text" itemprop="articleBody">
 					{{ essay.content }}
 				</div>
-				<ul class="pager">
+				<script>var disqus_identifier = "koken_essay_content_{{ essay.id }}";</script>
+				<koken:include file="_includes/discuss.lens" />				<ul class="pager">
 					<koken:previous>
 						<li class="previous"><koken:link title="{{ essay.title }} lesen"><i class="icon-arrow-left"></i>&nbsp;{{ essay.title }}</koken:link></li>
 					</koken:previous>
@@ -38,9 +39,8 @@
 						<li class="next"><koken:link title="{{ essay.title }} lesen">{{ essay.title }}&nbsp;<i class="icon-arrow-right"></i></koken:link></li>
 					</koken:next>
 				</ul>
+
 			</div>
-			<script>var disqus_identifier = "koken_essay_content_{{ essay.id }}";</script>
-			<koken:include file="_includes/discuss.lens" />
 		</div>
 		<div class="col-sm-4 col-md-3">
 			<aside class="sidebar panel panel-dark">
