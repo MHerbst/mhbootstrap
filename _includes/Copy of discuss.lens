@@ -1,0 +1,45 @@
+<div class="row">
+	<div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px">
+		<div class="text fullbox hidden-print" id="disqus_thread"></div>
+	</div>
+</div>
+<script type="text/javascript">
+var disqus_shortname = 'mherbst';
+(function() {
+var disqus = function() {
+if ($('#disqus_thread').length) {
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+} else if ($('[data-disqus-identifier]').length) {
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+}
+}
+$(function() {
+if ($.pjax) {
+$(document).on('pjax.success', function() {
+window.setTimeout(function() {
+if (window.DISQUS && $('#disqus_thread').length) {
+window.DISQUS.reset({
+reload: true,
+config: function() {
+this.page.url = window.location.href;
+this.page.identifier = disqus_identifier;
+}
+});
+} else {
+disqus();
+}
+}, 250)
+});
+}
+disqus();
+});
+}());
+</script>

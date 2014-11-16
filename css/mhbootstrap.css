@@ -333,57 +333,57 @@ article div.boxed {
 
 .modal-backdrop.fade {
 	opacity: 0;
-	filter: alpha(opacity = 80)
+	filter: alpha(opacity = 80);
 }
 
 .paginationframe, .pagination {
 	margin-top: -5px;
 	margin-bottom: 5px;
-	text-align: center
+	text-align: center;
 }
 
 .pager li>a {
-	background-color: #eee
+	background-color: #eee;
 }
 
 .pager {
-	margin: 0 5px 0 5px
+	margin: 0 5px 0 5px;
 }
 
 #content .pager, #album .pager, #essay .pager {
 	margin: 0;
 	background-color: #eee;
-	font-size: 12px
+	font-size: 12px;
 }
 
 #album .pager {
-	margin-top: -15px
+	margin-top: -15px;
 }
 
 #content .pager a, #album .pager a, #essay .pager a {
 	border: none;
-	border-radius: 0
+	border-radius: 0;
 }
 
 #content .pager li.disabled>a, #album .pager li.disabled>a {
-	background-color: transparent
+	background-color: transparent;
 }
 
 .slider {
-	padding-left: 0
+	padding-left: 0;
 }
 
 .meta {
-	font-size: 90%
+	font-size: 90%;
 }
 
 #albumlist p {
 	text-align: center;
-	padding-right: 10px
+	padding-right: 10px;
 }
 
 .image_thumb figure {
-	margin-bottom: -15px
+	margin-bottom: -15px;
 }
 
 .boxed figure {
@@ -393,25 +393,25 @@ article div.boxed {
 	top: -15px;
 	left: -15px;
 	margin-right: -30px;
-	width: auto
+	width: auto;
 }
 
 figcaption {
 	margin-top: 5px;
 	font-size: 80%;
-	text-align: center
+	text-align: center;
 }
 
 .boxed figcaption {
 	margin-top: 15px;
 	font-size: 140%;
 	font-weight: 700;
-	color: #6b7770
+	color: #6b7770;
 }
 
 figure.overlay {
 	display: block;
-	position: relative
+	position: relative;
 }
 
 figure.overlay figcaption {
@@ -428,7 +428,7 @@ figure.overlay figcaption {
 	-webkit-transition: opacity .5s ease-in-out;
 	-moz-transition: opacity .5s ease-in-out;
 	-o-transition: opacity .5s ease-in-out;
-	transition: opacity .5s ease-in-out
+	transition: opacity .5s ease-in-out;
 }
 
 figure.overlayLarge figcaption {
